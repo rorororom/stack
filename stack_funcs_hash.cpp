@@ -4,16 +4,18 @@
 
 #include "log_funcs.h"
 #include "stack_funcs_hash.h"
+#include "error_func.h"
 
 #define LINE __LINE__
 #define FILE __FILE__
 
-typedef int Elem_t; // тип элементов стека
-
 int StackFuncHash ()
 {
     Stack myStack = {
+        0,
         NULL,
+        0,
+        0,
         0,
         0
     };
@@ -23,12 +25,17 @@ int StackFuncHash ()
         (1 << 1), // ERROR_CAPACITY_BIT
         (1 << 2), // ERROR_DATA_BIT
         (1 << 3), // ERROR_PUSH_BIT
-        (1 << 4)  // ERROR_HASH_BIT
+        (1 << 4), // ERROR_HASH_BIT
+        (1 << 5), //ERROR_CANARY_START_BIT;
+        (1 << 6), //ERROR_CANARY_END_BIT;
     };
 
+
     StackCtor(&myStack, &stackErrors);
-    for (int i = 1; i <= 10; i++) {
-        StackPush(&myStack, i * 1, &stackErrors);
+    StackDump (&myStack, &stackErrors);
+
+    for (int i = 0; i <= 20; i++) {
+        StackPush(&myStack, i * 10, &stackErrors);
     }
 
     StackDump (&myStack, &stackErrors);
@@ -45,30 +52,33 @@ int StackFuncHash ()
 
 void StackRellocUp(struct Stack *myStack, float koef_capacity, struct StackErrors* stackErrors)
 {
+    fprintf(LOG_FILE, "я - StackRellocUp1\n");
     *stackErrors = StackOk(myStack);
 
     if (stackErrors -> ERROR_SIZE_BIT || stackErrors -> ERROR_CAPACITY_BIT || stackErrors -> ERROR_DATA_BIT) {
         PrintStackErrors(stackErrors);
     }
 
+    fprintf(LOG_FILE, "я - StackRellocUp\n");
     fprintf(LOG_FILE, "capacity!!!перед изменением = %d\n", myStack->capacity);
     myStack->capacity *= koef_capacity;
     fprintf(LOG_FILE, "capacity!!!после изменений = %d\n", myStack->capacity);
-    myStack->data = (Elem_t*)realloc(myStack->data, sizeof(Elem_t) * myStack->capacity);
+    myStack->data = (Elem_t*)realloc(myStack->data, sizeof(Elem_t) * myStack->capacity + 2 * sizeof(BUF_CANARY));
 }
+
 
 void StackDump(struct Stack* myStack, struct StackErrors* stackErrors)
 {
     *stackErrors = StackOk(myStack);
 
-    if (stackErrors -> ERROR_SIZE_BIT || stackErrors -> ERROR_CAPACITY_BIT || stackErrors -> ERROR_DATA_BIT) {
-        PrintStackErrors(stackErrors);
-    }
-
     fprintf(LOG_FILE, "\nTime is %s\n", __TIME__);
     fprintf(LOG_FILE, "Stack[%p] \"myStack\" from %s(%d) in function - %s.\n", myStack->data, FILE, LINE, __func__);
 
+    fprintf(LOG_FILE, "myStack->size = %d\n", myStack->size);
     int now_size = myStack->size;
+    fprintf(LOG_FILE, "now_size = %d\n", now_size);
+
+
     for (int i = 0; i < now_size; i++) {
         fprintf(LOG_FILE, "data[%d] = %d\n", i, myStack->data[i]);
     }
@@ -78,74 +88,58 @@ void StackDump(struct Stack* myStack, struct StackErrors* stackErrors)
     fprintf(LOG_FILE, "data[%p]\n", myStack->data);
 }
 
-void PrintStackErrors(struct StackErrors* stackErrors)
-{
-    if (stackErrors -> ERROR_SIZE_BIT) {
-        fprintf(stderr, "Ошибка: Превышен размер стека\n");
-    }
-    if (stackErrors -> ERROR_CAPACITY_BIT) {
-        fprintf(stderr, "Ошибка: Ошибка вместимости стека (неположительная)\n");
-    }
-    if (stackErrors -> ERROR_DATA_BIT) {
-        fprintf(stderr, "Ошибка: Нулевой указатель на данные стека\n");
-    }
-    if (stackErrors -> ERROR_PUSH_BIT) {
-        fprintf(stderr, "Ошибка: Ошибка при попытке добавления элемента\n");
-    }
-}
-
-struct StackErrors StackOk(struct Stack* myStack)
-{
-    struct StackErrors errorFlags = { 0, 0, 0, 0, 0 };
-
-    if (myStack->size > myStack->capacity) {
-        errorFlags.ERROR_SIZE_BIT = 1;
-    }
-
-    if (myStack->capacity <= 0) {
-        errorFlags.ERROR_CAPACITY_BIT = 1;
-    }
-
-    if (myStack->data == NULL) {
-        errorFlags.ERROR_DATA_BIT = 1;
-    }
-
-    unsigned int new_hash = CalculateHash (myStack);
-    if (myStack->hash != new_hash) {
-        errorFlags.ERROR_HASH_BIT = 1;
-    }
-
-    return errorFlags;
-}
-
 void StackCtor(struct Stack* myStack, struct StackErrors* stackErrors)
 {
-    myStack->data = (Elem_t*)calloc(Capacity, sizeof(Elem_t));
     myStack->capacity = Capacity;
+    myStack->data = (Elem_t*)calloc(myStack->capacity * sizeof(Elem_t) + 2 * sizeof(BUF_CANARY), sizeof(char));
+    *(unsigned int *)myStack->data = BUF_CANARY;
+    *(unsigned int*)((char*) myStack->data + sizeof(BUF_CANARY) + sizeof(Elem_t) * myStack->capacity) = BUF_CANARY;
+    //*(unsigned int *)(myStack->data + myStack->capacity) = BUF_CANARY;
+
+    fprintf (LOG_FILE, "я в сторе\n");
+
     myStack->size = 0;
     myStack->hash = CalculateHash(myStack); // Рассчитываем и сохраняем хэш-код
-}
 
-void StackPush(struct Stack* myStack, Elem_t value, struct StackErrors* stackErrors)
-{
     *stackErrors = StackOk(myStack);
 
     if (stackErrors -> ERROR_SIZE_BIT || stackErrors -> ERROR_CAPACITY_BIT || stackErrors -> ERROR_DATA_BIT) {
         PrintStackErrors(stackErrors);
     }
 
+    *stackErrors = StackOk(myStack);
+    if (stackErrors -> ERROR_SIZE_BIT || stackErrors -> ERROR_CAPACITY_BIT || stackErrors -> ERROR_DATA_BIT) {
+        PrintStackErrors(stackErrors);
+    }
+
+    fprintf(LOG_FILE, "CalculateHash = %u\n", CalculateHash(myStack));
+    fprintf(LOG_FILE, "myStack->hash = %u\n", myStack->hash);
+}
+
+void StackPush(struct Stack* myStack, Elem_t value, struct StackErrors* stackErrors)
+{
+   *stackErrors = StackOk(myStack);
+
     if (myStack->size >= myStack->capacity) {
         float koef_capacity = 2.0;
         StackRellocUp(myStack, koef_capacity, stackErrors);
     }
 
-    else if (myStack->size <= myStack->capacity / 2)
+    else if (myStack->size < (myStack->capacity) / 2)
     {
         float koef_capacity = 0.5;
         StackRellocUp(myStack, koef_capacity, stackErrors);
     }
 
+    fprintf (LOG_FILE, "я в пуше\n");
+
     myStack->data[myStack->size++] = value;
+
+    *stackErrors = StackOk(myStack);
+
+    if (stackErrors -> ERROR_SIZE_BIT || stackErrors -> ERROR_CAPACITY_BIT || stackErrors -> ERROR_DATA_BIT) {
+        PrintStackErrors(stackErrors);
+    }
 }
 
 void StackDtor(struct Stack* myStack, struct StackErrors* stackErrors)
@@ -160,21 +154,25 @@ Elem_t StackPop(struct Stack* myStack, struct StackErrors* stackErrors)
 {
     *stackErrors = StackOk(myStack);
 
-    if (stackErrors -> ERROR_SIZE_BIT || stackErrors -> ERROR_CAPACITY_BIT || stackErrors -> ERROR_DATA_BIT) {
-        PrintStackErrors(stackErrors);
-    }
-
     return myStack->data[--myStack->size];
 }
 
-unsigned int CalculateHash (const struct Stack* myStack)
+unsigned int CalculateHash (struct Stack* myStack)
 {
     const char* data = (const char*)myStack->data;
     unsigned int hash = 0;
 
+    hash = (hash * HASH_CONST + sizeof(myStack->capacity));
+    hash = (hash * HASH_CONST + sizeof(Elem_t) * myStack->size);
+
     for (int i = 0; i < myStack->size; i++) {
-        hash += (unsigned int)data[i];
+        hash = (hash * HASH_CONST + data[i]);
     }
 
     return hash;
+}
+
+Elem_t* ReturnData (struct Stack* myStack)
+{
+    return myStack -> data + sizeof (BUF_CANARY);
 }
