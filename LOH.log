@@ -1,0 +1,782 @@
+5
+4
+3
+2
+1
+
+ ЗАКРЫТ ФАЙЛ5
+4
+3
+2
+1
+
+ ЗАКРЫТ ФАЙЛ5
+4
+3
+2
+1
+
+ ЗАКРЫТ ФАЙЛ5
+4
+3
+2
+1
+Stack[0x7fad24405a60] "myStack" from functions.cpp(22) in function - (null).
+size = 0capacity = 5data[0x7fad24405a60]
+
+ ЗАКРЫТ ФАЙЛ5
+4
+3
+2
+1
+Stack[0x7fe06d405a60] "myStack" from functions.cpp(22) in function - (null).
+size = 0
+capacity = 5
+data[0x7fe06d405a60]
+
+ ЗАКРЫТ ФАЙЛ5
+4
+3
+2
+1
+Time is 14163011Stack[0x7fb661405a60] "myStack" from functions.cpp(23) in function - StackDump.
+size = 0
+capacity = 5
+data[0x7fb661405a60]
+
+ ЗАКРЫТ ФАЙЛ5
+4
+3
+2
+1
+Time is 248876083.
+Stack[0x7fb51dc05a60] "myStack" from functions.cpp(23) in function - StackDump.
+size = 0.
+capacity = 5.
+data[0x7fb51dc05a60].
+
+ ЗАКРЫТ ФАЙЛ5
+4
+3
+2
+1
+Time is 43781171
+Stack[0x7f8895405a60] "myStack" from functions.cpp(23) in function - StackDump.
+size = 0
+capacity = 5
+data[0x7f8895405a60]
+
+ ЗАКРЫТ ФАЙЛTime is 228928563
+Stack[0x7fd43fc05a60] "myStack" from functions.cpp(23) in function - StackDump.
+data[0] = 1
+data[1] = 2
+data[2] = 3
+data[3] = 4
+data[4] = 5
+size = 5
+capacity = 5
+data[0x7fd43fc05a60]
+5
+4
+3
+2
+1
+
+ ЗАКРЫТ ФАЙЛTime is 236010539
+Stack[0x7fd7d8405a60] "myStack" from functions.cpp(23) in function - StackDump.
+data[0] = 1
+data[1] = 2
+data[2] = 3
+data[3] = 4
+data[4] = 5
+size = 5
+capacity = 5
+data[0x7fd7d8405a60]
+5
+4
+3
+2
+1
+
+ ЗАКРЫТ ФАЙЛ
+
+Time is 1367075
+Stack[0x7fd8c4405a60] "myStack" from functions.cpp(23) in function - StackDump.
+data[0] = 1
+data[1] = 2
+data[2] = 3
+data[3] = 4
+data[4] = 5
+size = 5
+capacity = 5
+data[0x7fd8c4405a60]
+5
+4
+3
+2
+1
+
+ ЗАКРЫТ ФАЙЛ
+
+Time is 1301539
+Stack[0x7fca4b405a60] "myStack" from functions.cpp(23) in function - StackDump.
+data[0] = 1
+data[1] = 2
+data[2] = 3
+data[3] = 4
+data[4] = 5
+size = 5
+capacity = 5
+data[0x7fca4b405a60]
+5
+4
+3
+2
+1
+
+ ЗАКРЫТ ФАЙЛ
+
+Time is 215575587
+Stack[0x7fe5ea405a60] "myStack" from functions.cpp(23) in function - StackDump.
+data[0] = 1
+data[1] = 2
+data[2] = 3
+data[3] = 4
+data[4] = 5
+size = 5
+capacity = 5
+data[0x7fe5ea405a60]
+5
+4
+3
+2
+1
+
+ ЗАКРЫТ ФАЙЛ
+
+Time is 196590627
+Stack[0x7f92f84047e0] "myStack" from functions.cpp(23) in function - StackDump.
+data[0] = 1
+data[1] = 2
+data[2] = 3
+data[3] = 4
+data[4] = 5
+size = 5
+capacity = 100
+data[0x7f92f84047e0]
+5
+4
+3
+2
+1
+
+ ЗАКРЫТ ФАЙЛ
+
+Time is 184765475
+Stack[0x7f8bd0405a60] "myStack" from functions.cpp(23) in function - StackDump.
+data[0] = 1
+data[1] = 2
+data[2] = 3
+data[3] = 4
+data[4] = 5
+size = 5
+capacity = 100
+data[0x7f8bd0405a60]
+5
+4
+3
+2
+1
+
+ ЗАКРЫТ ФАЙЛ
+
+Time is 203095075
+Stack[0x7f89d6405a60] "myStack" from functions.cpp(23) in function - StackDump.
+data[0] = 1
+data[1] = 2
+data[2] = 3
+data[3] = 4
+data[4] = 5
+size = 5
+capacity = 4
+data[0x7f89d6405a60]
+5
+4
+3
+2
+1
+
+ ЗАКРЫТ ФАЙЛ
+
+ ОТКРЫТ ФАЙЛ
+
+Time is 259533835
+Stack[0x7fa4a7c05a60] "myStack" from functions.cpp(23) in function - StackDump.
+data[0] = 1
+data[1] = 2
+data[2] = 3
+data[3] = 4
+data[4] = 5
+size = 5
+capacity = 4
+data[0x7fa4a7c05a60]
+5
+4
+3
+2
+1
+
+ ЗАКРЫТ ФАЙЛ
+\----------------------------------------------------\
+ОТКРЫТ ФАЙЛ
+
+Time is 122956747
+Stack[0x7fab2e405a60] "myStack" from functions.cpp(23) in function - StackDump.
+data[0] = 1
+data[1] = 2
+data[2] = 3
+data[3] = 4
+data[4] = 5
+size = 5
+capacity = 4
+data[0x7fab2e405a60]
+5
+4
+3
+2
+1
+
+ ЗАКРЫТ ФАЙЛ
+\----------------------------------------------------\
+\----------------------------------------------------\
+ОТКРЫТ ФАЙЛ
+
+Time is 218700747
+Stack[0x7fce1a405a60] "myStack" from functions.cpp(23) in function - StackDump.
+data[0] = 1
+data[1] = 2
+data[2] = 3
+data[3] = 4
+data[4] = 5
+size = 5
+capacity = 4
+data[0x7fce1a405a60]
+5
+4
+3
+2
+1
+ЗАКРЫТ ФАЙЛ
+\----------------------------------------------------\
+\----------------------------------------------------\
+ОТКРЫТ ФАЙЛ
+
+Time is 5753803
+Stack[0x7fc018405a60] "myStack" from stack_funcs.cpp(23) in function - StackDump.
+data[0] = 1
+data[1] = 2
+data[2] = 3
+data[3] = 4
+data[4] = 5
+size = 5
+capacity = 4
+data[0x7fc018405a60]
+5
+4
+3
+2
+1
+ЗАКРЫТ ФАЙЛ
+\----------------------------------------------------\
+\----------------------------------------------------\
+ОТКРЫТ ФАЙЛ
+
+Time is 39459787
+Stack[0x7fdbbd405a60] "myStack" from stack_funcs.cpp(23) in function - StackDump.
+data[0] = 1
+data[1] = 2
+data[2] = 3
+data[3] = 4
+data[4] = 5
+size = 5
+capacity = 6
+data[0x7fdbbd405a60]
+5
+4
+3
+2
+1
+ЗАКРЫТ ФАЙЛ
+\----------------------------------------------------\
+\----------------------------------------------------\
+ОТКРЫТ ФАЙЛ
+capacity!!! = 100
+
+Time is 133000123
+Stack[0x7fe010405a60] "myStack" from stack_funcs.cpp(23) in function - StackDump.
+data[0] = 1
+data[1] = 2
+data[2] = 3
+data[3] = 4
+data[4] = 5
+size = 5
+capacity = 6
+data[0x7fe010405a60]
+5
+4
+3
+2
+1
+ЗАКРЫТ ФАЙЛ
+\----------------------------------------------------\
+\----------------------------------------------------\
+ОТКРЫТ ФАЙЛ
+capacity!!! = 100
+capacity!!!перед изменением = 100
+capacity!!!после изменений = 50
+capacity!!!перед изменением = 50
+capacity!!!после изменений = 25
+capacity!!!перед изменением = 25
+capacity!!!после изменений = 12
+capacity!!!перед изменением = 12
+capacity!!!после изменений = 6
+
+Time is 83717051
+Stack[0x7f8322c05a60] "myStack" from stack_funcs.cpp(25) in function - StackDump.
+data[0] = 1
+data[1] = 2
+data[2] = 3
+data[3] = 4
+data[4] = 5
+size = 5
+capacity = 6
+data[0x7f8322c05a60]
+5
+4
+3
+2
+1
+ЗАКРЫТ ФАЙЛ
+\----------------------------------------------------\
+\----------------------------------------------------\
+ОТКРЫТ ФАЙЛ
+
+Time is 17:20:10
+Stack[0x7fde6c604080] "myStack" from stack_funcs.cpp(41) in function - StackDump.
+data[0] = 1
+data[1] = 2
+data[2] = 3
+data[3] = 4
+data[4] = 5
+size = 5
+capacity = 100
+data[0x7fde6c604080]
+5
+4
+3
+2
+1
+ЗАКРЫТ ФАЙЛ
+\----------------------------------------------------\
+\----------------------------------------------------\
+ОТКРЫТ ФАЙЛ
+capacity!!!перед изменением = 100
+capacity!!!после изменений = 50
+capacity!!!перед изменением = 50
+capacity!!!после изменений = 25
+capacity!!!перед изменением = 25
+capacity!!!после изменений = 12
+capacity!!!перед изменением = 12
+capacity!!!после изменений = 6
+
+Time is 17:22:23
+Stack[0x7fa54bc05a60] "myStack" from stack_funcs.cpp(41) in function - StackDump.
+data[0] = 1
+data[1] = 2
+data[2] = 3
+data[3] = 4
+data[4] = 5
+size = 5
+capacity = 6
+data[0x7fa54bc05a60]
+5
+4
+3
+2
+1
+ЗАКРЫТ ФАЙЛ
+\----------------------------------------------------\
+\----------------------------------------------------\
+ОТКРЫТ ФАЙЛ
+capacity!!!перед изменением = 100
+capacity!!!после изменений = 50
+capacity!!!перед изменением = 50
+capacity!!!после изменений = 25
+capacity!!!перед изменением = 25
+capacity!!!после изменений = 12
+capacity!!!перед изменением = 12
+capacity!!!после изменений = 6
+capacity!!!перед изменением = 6
+capacity!!!после изменений = 12
+
+Time is 17:24:00
+Stack[0x7fba62c05a60] "myStack" from stack_funcs.cpp(41) in function - StackDump.
+data[0] = 1
+data[1] = 2
+data[2] = 3
+data[3] = 4
+data[4] = 5
+data[5] = 6
+data[6] = 7
+data[7] = 8
+data[8] = 9
+data[9] = 10
+size = 10
+capacity = 12
+data[0x7fba62c05a60]
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+ЗАКРЫТ ФАЙЛ
+\----------------------------------------------------\
+\----------------------------------------------------\
+ОТКРЫТ ФАЙЛ
+ЗАКРЫТ ФАЙЛ
+\----------------------------------------------------\
+\----------------------------------------------------\
+ОТКРЫТ ФАЙЛ
+capacity!!!перед изменением = 100
+capacity!!!после изменений = 50
+capacity!!!перед изменением = 50
+capacity!!!после изменений = 25
+capacity!!!перед изменением = 25
+capacity!!!после изменений = 12
+capacity!!!перед изменением = 12
+capacity!!!после изменений = 6
+capacity!!!перед изменением = 6
+capacity!!!после изменений = 12
+
+Time is 18:12:33
+Stack[0x7f9ef2405a60] "myStack" from stack_funcs.cpp(40) in function - StackDump.
+data[0] = 1
+data[1] = 2
+data[2] = 3
+data[3] = 4
+data[4] = 5
+data[5] = 6
+data[6] = 7
+data[7] = 8
+data[8] = 9
+data[9] = 10
+size = 10
+capacity = 12
+data[0x7f9ef2405a60]
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+ЗАКРЫТ ФАЙЛ
+\----------------------------------------------------\
+\----------------------------------------------------\
+ОТКРЫТ ФАЙЛ
+capacity!!!перед изменением = 100
+capacity!!!после изменений = 50
+capacity!!!перед изменением = 50
+capacity!!!после изменений = 25
+capacity!!!перед изменением = 25
+capacity!!!после изменений = 12
+capacity!!!перед изменением = 12
+capacity!!!после изменений = 6
+capacity!!!перед изменением = 6
+capacity!!!после изменений = 12
+
+Time is 18:42:50
+Stack[0x7fcbb1c05a60] "myStack" from stack_funcs_canary.cpp(76) in function - StackDump.
+data[0] = 1
+data[1] = 2
+data[2] = 3
+data[3] = 4
+data[4] = 5
+data[5] = 6
+data[6] = 7
+data[7] = 8
+data[8] = 9
+data[9] = 10
+size = 10
+capacity = 12
+data[0x7fcbb1c05a60]
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+ЗАКРЫТ ФАЙЛ
+\----------------------------------------------------\
+\----------------------------------------------------\
+ОТКРЫТ ФАЙЛ
+capacity!!!перед изменением = 100
+capacity!!!после изменений = 50
+capacity!!!перед изменением = 50
+capacity!!!после изменений = 25
+capacity!!!перед изменением = 25
+capacity!!!после изменений = 12
+capacity!!!перед изменением = 12
+capacity!!!после изменений = 6
+capacity!!!перед изменением = 6
+capacity!!!после изменений = 12
+
+Time is 18:45:35
+Stack[0x7faf4fc05a60] "myStack" from stack_funcs_canary.cpp(76) in function - StackDump.
+data[0] = 1
+data[1] = 2
+data[2] = 3
+data[3] = 4
+data[4] = 5
+data[5] = 6
+data[6] = 7
+data[7] = 8
+data[8] = 9
+data[9] = 10
+size = 10
+capacity = 12
+data[0x7faf4fc05a60]
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+ЗАКРЫТ ФАЙЛ
+\----------------------------------------------------\
+\----------------------------------------------------\
+ОТКРЫТ ФАЙЛ
+capacity!!!перед изменением = 100
+capacity!!!после изменений = 50
+capacity!!!перед изменением = 50
+capacity!!!после изменений = 25
+capacity!!!перед изменением = 25
+capacity!!!после изменений = 12
+capacity!!!перед изменением = 12
+capacity!!!после изменений = 6
+capacity!!!перед изменением = 6
+capacity!!!после изменений = 12
+
+Time is 18:45:55
+Stack[0x7f92f1c05a60] "myStack" from stack_funcs_canary.cpp(76) in function - StackDump.
+data[0] = 1
+data[1] = 2
+data[2] = 3
+data[3] = 4
+data[4] = 5
+data[5] = 6
+data[6] = 7
+data[7] = 8
+data[8] = 9
+data[9] = 10
+size = 10
+capacity = 12
+data[0x7f92f1c05a60]
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+ЗАКРЫТ ФАЙЛ
+\----------------------------------------------------\
+\----------------------------------------------------\
+ОТКРЫТ ФАЙЛ
+capacity!!!перед изменением = 100
+capacity!!!после изменений = 50
+capacity!!!перед изменением = 50
+capacity!!!после изменений = 25
+capacity!!!перед изменением = 25
+capacity!!!после изменений = 12
+capacity!!!перед изменением = 12
+capacity!!!после изменений = 6
+capacity!!!перед изменением = 6
+capacity!!!после изменений = 12
+
+Time is 19:01:56
+Stack[0x7fc3fac05a60] "myStack" from stack_funcs_hash.cpp(68) in function - StackDump.
+data[0] = 1
+data[1] = 2
+data[2] = 3
+data[3] = 4
+data[4] = 5
+data[5] = 6
+data[6] = 7
+data[7] = 8
+data[8] = 9
+data[9] = 10
+size = 10
+capacity = 12
+data[0x7fc3fac05a60]
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+ЗАКРЫТ ФАЙЛ
+\----------------------------------------------------\
+\----------------------------------------------------\
+ОТКРЫТ ФАЙЛ
+capacity!!!перед изменением = 100
+capacity!!!после изменений = 50
+capacity!!!перед изменением = 50
+capacity!!!после изменений = 25
+capacity!!!перед изменением = 25
+capacity!!!после изменений = 12
+capacity!!!перед изменением = 12
+capacity!!!после изменений = 6
+capacity!!!перед изменением = 6
+capacity!!!после изменений = 12
+
+Time is 19:28:03
+Stack[0x7f96a8c05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackDump.
+data[0] = 1
+data[1] = 2
+data[2] = 3
+data[3] = 4
+data[4] = 5
+data[5] = 6
+data[6] = 7
+data[7] = 8
+data[8] = 9
+data[9] = 10
+size = 10
+capacity = 12
+data[0x7f96a8c05a60]
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+ЗАКРЫТ ФАЙЛ
+\----------------------------------------------------\
+\----------------------------------------------------\
+ОТКРЫТ ФАЙЛ
+capacity!!!перед изменением = 100
+capacity!!!после изменений = 50
+capacity!!!перед изменением = 50
+capacity!!!после изменений = 25
+capacity!!!перед изменением = 25
+capacity!!!после изменений = 12
+capacity!!!перед изменением = 12
+capacity!!!после изменений = 6
+capacity!!!перед изменением = 6
+capacity!!!после изменений = 12
+
+Time is 19:28:54
+Stack[0x7f81a0c05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackDump.
+data[0] = 1
+data[1] = 2
+data[2] = 3
+data[3] = 4
+data[4] = 5
+data[5] = 6
+data[6] = 7
+data[7] = 8
+data[8] = 9
+data[9] = 10
+size = 10
+capacity = 12
+data[0x7f81a0c05a60]
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+ЗАКРЫТ ФАЙЛ
+\----------------------------------------------------\
+\----------------------------------------------------\
+ОТКРЫТ ФАЙЛ
+capacity!!!перед изменением = 1
+capacity!!!после изменений = 0
+capacity!!!перед изменением = 0
+capacity!!!после изменений = 0
+capacity!!!перед изменением = 0
+capacity!!!после изменений = 0
+capacity!!!перед изменением = 0
+capacity!!!после изменений = 0
+capacity!!!перед изменением = 0
+capacity!!!после изменений = 0
+capacity!!!перед изменением = 0
+capacity!!!после изменений = 0
+capacity!!!перед изменением = 0
+capacity!!!после изменений = 0
+capacity!!!перед изменением = 0
+capacity!!!после изменений = 0
+capacity!!!перед изменением = 0
+capacity!!!после изменений = 0
+capacity!!!перед изменением = 0
+capacity!!!после изменений = 0
+
+Time is 20:08:00
+Stack[0x7fd7d4e04090] "myStack" from stack_funcs_hash.cpp(69) in function - StackDump.
+data[0] = 5
+data[1] = 0
+data[2] = 7
+data[3] = 0
+data[4] = 9
+data[5] = 6
+data[6] = 0
+data[7] = 8
+data[8] = 0
+data[9] = 10
+size = 10
+capacity = 0
+data[0x7fd7d4e04090]
+10
+0
+8
+0
+6
+9
+0
+7
+0
+5
+ЗАКРЫТ ФАЙЛ
+\----------------------------------------------------\
