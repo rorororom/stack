@@ -8,10 +8,6 @@
 
 void PrintStackErrors(struct StackErrors* stackErrors)
 {
-    if (stackErrors -> ERROR_SIZE_BIT || stackErrors -> ERROR_CAPACITY_BIT || stackErrors -> ERROR_DATA_BIT) {
-        PrintStackErrors(stackErrors);
-    }
-
     if (stackErrors -> ERROR_SIZE_BIT)
     {
         fprintf(stderr, "Ошибка: Превышен размер стека\n");
@@ -46,51 +42,51 @@ void PrintStackErrors(struct StackErrors* stackErrors)
     {
         fprintf(stderr, "Ошибка: Ошибка хэша\n");
     }
-
-    if (stackErrors -> ERROR_SIZE_BIT || stackErrors -> ERROR_CAPACITY_BIT ||
-        stackErrors -> ERROR_DATA_BIT || stackErrors -> ERROR_CANARY_END_BIT ||
-        stackErrors -> ERROR_CANARY_END_BIT || stackErrors -> ERROR_HASH_BIT ||
-        stackErrors -> ERROR_PUSH_BIT)
-    {
-        PrintStackErrors(stackErrors);
-    }
 }
 
-struct StackErrors StackOk(struct Stack* myStack)
+int StackVerify(struct Stack* myStack, struct StackErrors* stackErrors)
 {
     struct StackErrors errorFlags = { 0, 0, 0, 0, 0, 0};
+
+    int sum_error = 0;
 
     if (myStack->size > myStack->capacity)
     {
         errorFlags.ERROR_SIZE_BIT = 1;
+        sum_error++;
     }
 
     if (myStack->capacity <= 0)
     {
         errorFlags.ERROR_CAPACITY_BIT = 1;
+        sum_error++;
     }
 
     if (myStack->data == NULL)
     {
         errorFlags.ERROR_DATA_BIT = 1;
+        sum_error++;
     }
 
-    if (myStack->canary_start != Start)
+    if (myStack->canary_start != BUF_CANARY)
     {
         errorFlags.ERROR_CANARY_START_BIT = 1;
+        sum_error++;
     }
 
-    if (myStack->canary_start != End)
+    if (myStack->canary_start != BUF_CANARY)
     {
         errorFlags.ERROR_CANARY_END_BIT = 1;
+        sum_error++;
     }
 
     unsigned int new_hash = CalculateHash (myStack);
     if (myStack->hash != new_hash) {
         errorFlags.ERROR_HASH_BIT = 1;
+        sum_error++;
     }
 
-    return errorFlags;
+    return sum_error;
 }
 
 

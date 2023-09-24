@@ -1,2 +1,2 @@
 void PrintStackErrors(struct StackErrors* stackErrors);
-struct StackErrors StackOk(struct Stack* myStack);
+int StackVerify(struct Stack* myStack, struct StackErrors* stackErrors);

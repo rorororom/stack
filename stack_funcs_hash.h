@@ -14,10 +14,10 @@ enum eroor {
 struct Stack {
     uint32_t canary_start;
     Elem_t* data;
-    uint32_t canary_end;
     int capacity; // объем
     int size; // номер заполненного
     unsigned int hash;
+    uint32_t canary_end;
 };
 
 struct StackErrors {
@@ -31,7 +31,7 @@ struct StackErrors {
 };
 
 void StackRellocUp(struct Stack *myStack, float koef_capacity, struct StackErrors* stackErrors);
-void StackDump(struct Stack* myStack, struct StackErrors* stackErrors);
+void StackDump(struct Stack* myStack, struct StackErrors* stackErrors, const char *file, int line, const char *function);
 struct StackErrors StackOk(struct Stack* myStack);
 void StackCtor(struct Stack* myStack, struct StackErrors* stackErrors);
 void StackPush(struct Stack* myStack, Elem_t value, struct StackErrors* stackErrors);
