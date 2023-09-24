@@ -2,6 +2,8 @@ typedef int Elem_t; // тип элементов стека
 
 const int Capacity = 100;
 const int HASH_CONST = 234;
+const int MOD_FOR_HASH = 107;
+const int SIZE = 20;
 
 const uint32_t Start = 0xDEADBEEF;
 const uint32_t End = 0xFEEDBEEF;
@@ -28,6 +30,8 @@ struct StackErrors {
     int ERROR_HASH_BIT;
     int ERROR_CANARY_START_BIT;
     int ERROR_CANARY_END_BIT;
+    int ERROR_DATA_END_BIT;
+    int ERROR_DATA_START_BIT;
 };
 
 void StackRellocUp(struct Stack *myStack, float koef_capacity, struct StackErrors* stackErrors);

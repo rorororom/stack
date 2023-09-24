@@ -10,71 +10,94 @@ void PrintStackErrors(struct StackErrors* stackErrors)
 {
     if (stackErrors -> ERROR_SIZE_BIT)
     {
-        fprintf(stderr, "Ошибка: Превышен размер стека\n");
+        fprintf(LOG_FILE, "Ошибка: Превышен размер стека\n");
     }
 
     if (stackErrors -> ERROR_CAPACITY_BIT)
     {
-        fprintf(stderr, "Ошибка: Ошибка вместимости стека (неположительная)\n");
+        fprintf(LOG_FILE, "Ошибка: Ошибка вместимости стека (неположительная)\n");
     }
 
     if (stackErrors -> ERROR_DATA_BIT)
     {
-        fprintf(stderr, "Ошибка: Нулевой указатель на данные стека\n");
+        fprintf(LOG_FILE, "Ошибка: Нулевой указатель на данные стека\n");
     }
 
     if (stackErrors -> ERROR_PUSH_BIT)
     {
-        fprintf(stderr, "Ошибка: Ошибка при попытке добавления элемента\n");
+        fprintf(LOG_FILE, "Ошибка: Ошибка при попытке добавления элемента\n");
     }
 
     if (stackErrors -> ERROR_CANARY_END_BIT)
     {
-        fprintf(stderr, "Ошибка: Ошибка канарейки конца\n");
+        fprintf(LOG_FILE, "Ошибка: Ошибка канарейки конца\n");
     }
 
     if (stackErrors -> ERROR_CANARY_START_BIT)
     {
-        fprintf(stderr, "Ошибка: Ошибка канарейки начала\n");
+        fprintf(LOG_FILE, "Ошибка: Ошибка канарейки начала\n");
     }
 
     if (stackErrors -> ERROR_HASH_BIT)
     {
-        fprintf(stderr, "Ошибка: Ошибка хэша\n");
+        fprintf(LOG_FILE, "Ошибка: Ошибка хэша\n");
     }
 }
 
 int StackVerify(struct Stack* myStack, struct StackErrors* stackErrors)
 {
-    struct StackErrors errorFlags = { 0, 0, 0, 0, 0, 0};
+    struct StackErrors errorFlags = { 0, 0, 0, 0, 0, 0 };
 
     int sum_error = 0;
 
+    //printf ("myStack->size - %d\n", myStack->size);
+    //printf ("myStack->capacity - %d\n", myStack->capacity);
+    //printf ("\n");
     if (myStack->size > myStack->capacity)
     {
         errorFlags.ERROR_SIZE_BIT = 1;
         sum_error++;
     }
 
+    //if (myStack -> capacity <= 0)
+    //{
+    //printf ("myStack->capacity - %d\n", myStack->capacity);
+    //printf ("\n");
+    //}
     if (myStack->capacity <= 0)
     {
         errorFlags.ERROR_CAPACITY_BIT = 1;
         sum_error++;
     }
 
+    // if (myStack -> data == NULL)
+    // {
+    // printf ("myStack->data - %p\n", &myStack->capacity);
+    // printf ("\n");
+    // }
     if (myStack->data == NULL)
     {
         errorFlags.ERROR_DATA_BIT = 1;
         sum_error++;
     }
 
+    // if (myStack -> canary_start != BUF_CANARY)
+    // {
+    // printf ("canary_start - %d\n", myStack -> canary_start);
+    // printf ("\n");
+    // }
     if (myStack->canary_start != BUF_CANARY)
     {
         errorFlags.ERROR_CANARY_START_BIT = 1;
         sum_error++;
     }
 
-    if (myStack->canary_start != BUF_CANARY)
+    // if (myStack -> canary_end != BUF_CANARY)
+    // {
+    // printf ("canary_end - %d\n", myStack -> canary_end);
+    // printf ("\n");
+    // }
+    if (myStack->canary_end != BUF_CANARY)
     {
         errorFlags.ERROR_CANARY_END_BIT = 1;
         sum_error++;
@@ -83,6 +106,16 @@ int StackVerify(struct Stack* myStack, struct StackErrors* stackErrors)
     unsigned int new_hash = CalculateHash (myStack);
     if (myStack->hash != new_hash) {
         errorFlags.ERROR_HASH_BIT = 1;
+        sum_error++;
+    }
+
+    if (*(unsigned int *)myStack->data != BUF_CANARY){
+        errorFlags.ERROR_DATA_START_BIT = 1;
+        sum_error++;
+    }
+
+    if (*(unsigned int*)((char*) myStack->data + sizeof(BUF_CANARY) + sizeof(Elem_t) * myStack->capacity) != BUF_CANARY) {
+        errorFlags.ERROR_DATA_END_BIT = 1;
         sum_error++;
     }
 

@@ -27,20 +27,14 @@ int StackFuncHash ()
         0
     };
 
-    struct StackErrors stackErrors = {
-        (1 << 0), // ERROR_SIZE_BIT
-        (1 << 1), // ERROR_CAPACITY_BIT
-        (1 << 2), // ERROR_DATA_BIT
-        (1 << 3), // ERROR_PUSH_BIT
-        (1 << 4), // ERROR_HASH_BIT
-        (1 << 5), //ERROR_CANARY_START_BIT;
-        (1 << 6), //ERROR_CANARY_END_BIT;
-    };
+    myStack.canary_start = BUF_CANARY;
+    myStack.canary_end = BUF_CANARY;
 
+    struct StackErrors stackErrors = {};
 
     StackCtor(&myStack, &stackErrors);
 
-    for (int i = 0; i <= 20; i++) {
+    for (int i = 0; i <= SIZE; i++) {
         StackPush(&myStack, i * 10, &stackErrors);
     }
 
@@ -71,13 +65,10 @@ void StackRellocUp(struct Stack *myStack, float koef_capacity, struct StackError
 void StackDump(struct Stack* myStack, struct StackErrors* stackErrors, const char *file, int line, const char *function)
 {
     fprintf(LOG_FILE, "\nTime is %s\n", __TIME__);
-    printf("I'm stackDump called from %s (%d) %s\n", function, line, file);
-    fprintf(LOG_FILE, "Stack[%p] \"myStack\" from %s(%d) in function - %s.\n", myStack->data, FILE, LINE, __func__);
+    fprintf(LOG_FILE, "I'm stackDump called from %s (%d) %s\n", function, line, file);
+    fprintf(LOG_FILE, "Stack[%p] \"myStack\" from %s(%d) in function - %s.\n", myStack->data, FILE, LINE, function);
 
-    fprintf(LOG_FILE, "myStack->size = %d\n", myStack->size);
     int now_size = myStack->size;
-    fprintf(LOG_FILE, "now_size = %d\n", now_size);
-
 
     for (int i = 0; i < now_size; i++) {
         fprintf(LOG_FILE, "data[%d] = %d\n", i, myStack->data[i]);
@@ -140,7 +131,7 @@ Elem_t StackPop(struct Stack* myStack, struct StackErrors* stackErrors)
 {
     STACK_VERIFY(myStack, stackErrors);
 
-    return myStack->data[--myStack->size];
+    return myStack->data[--(myStack->size)];
 }
 
 unsigned int CalculateHash (struct Stack* myStack)
@@ -148,8 +139,8 @@ unsigned int CalculateHash (struct Stack* myStack)
     const char* data = (const char*)myStack->data;
     unsigned int hash = 0;
 
-    hash = (hash * HASH_CONST + sizeof(myStack->capacity));
-    hash = (hash * HASH_CONST + sizeof(Elem_t) * myStack->size);
+    hash = (hash * HASH_CONST + sizeof(myStack->capacity)) % MOD_FOR_HASH;
+    hash = (hash * HASH_CONST + sizeof(Elem_t) * myStack->size) % MOD_FOR_HASH;
 
     for (int i = 0; i < myStack->size; i++) {
         hash = (hash * HASH_CONST + data[i]);

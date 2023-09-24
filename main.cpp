@@ -8,6 +8,14 @@
 int main()
 {
     OpenLogFile ("LOH");
+
+    #ifdef WITH_CANARY_AND_HASHE
     StackFuncHash ();
+
+    #else
+    printf ("hello world\n");
+    #endif
 }
+
+//-DWITH_CANARY_AND_HASHE
 
