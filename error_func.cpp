@@ -57,6 +57,7 @@ int StackVerify(struct Stack* myStack, struct StackErrors* stackErrors)
     {
         errorFlags.ERROR_SIZE_BIT = 1;
         sum_error++;
+        printf ("HERE1\n");
     }
 
     //if (myStack -> capacity <= 0)
@@ -68,6 +69,7 @@ int StackVerify(struct Stack* myStack, struct StackErrors* stackErrors)
     {
         errorFlags.ERROR_CAPACITY_BIT = 1;
         sum_error++;
+        printf ("HERE2\n");
     }
 
     // if (myStack -> data == NULL)
@@ -79,6 +81,7 @@ int StackVerify(struct Stack* myStack, struct StackErrors* stackErrors)
     {
         errorFlags.ERROR_DATA_BIT = 1;
         sum_error++;
+        printf ("HERE3\n");
     }
 
     // if (myStack -> canary_start != BUF_CANARY)
@@ -90,6 +93,7 @@ int StackVerify(struct Stack* myStack, struct StackErrors* stackErrors)
     {
         errorFlags.ERROR_CANARY_START_BIT = 1;
         sum_error++;
+        printf ("HERE4\n");
     }
 
     // if (myStack -> canary_end != BUF_CANARY)
@@ -101,24 +105,34 @@ int StackVerify(struct Stack* myStack, struct StackErrors* stackErrors)
     {
         errorFlags.ERROR_CANARY_END_BIT = 1;
         sum_error++;
+        printf ("HERE5\n");
     }
 
     unsigned int new_hash = CalculateHash (myStack);
+    // printf ("new_hashe - %d\n", new_hash);
+    // printf ("myStack->hash - %d\n", myStack->hash);
+    // printf ("\n");
     if (myStack->hash != new_hash) {
         errorFlags.ERROR_HASH_BIT = 1;
         sum_error++;
+        printf ("HERE6\n");
     }
 
-    if (*(unsigned int *)myStack->data != BUF_CANARY){
+    //printf ("первая канарейка - %lu\n", *(long long *)myStack->data);
+    if (*(long long *)myStack->data != BUF_CANARY){
         errorFlags.ERROR_DATA_START_BIT = 1;
         sum_error++;
+        printf ("HERE7\n");
     }
 
-    if (*(unsigned int*)((char*) myStack->data + sizeof(BUF_CANARY) + sizeof(Elem_t) * myStack->capacity) != BUF_CANARY) {
+    //printf ("вторая канарейка - %lu\n", *(long long*)((char*) myStack->data + sizeof(BUF_CANARY) + sizeof(Elem_t) * myStack->capacity));
+    if (*(long long*)((char*)myStack->data + sizeof(long long) + sizeof(Elem_t) * myStack->capacity) != BUF_CANARY) {
         errorFlags.ERROR_DATA_END_BIT = 1;
         sum_error++;
+        printf ("HERE8\n");
     }
 
+    printf ("sum - %d\n", sum_error);
     return sum_error;
 }
 

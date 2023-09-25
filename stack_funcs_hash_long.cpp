@@ -16,7 +16,7 @@
         STACK_DUMP(myStack); }\
 }
 
-int StackFuncHash ()
+int StackFuncHash()
 {
     Stack myStack = {
         0,
@@ -39,19 +39,19 @@ int StackFuncHash ()
         StackPush(&myStack, i * 10, &stackErrors);
     }
 
-    int size = myStack.size;
-    fprintf (LOG_FILE, "\nЯ В ПОПЕ\n");
+   int size = myStack.size;
+    fprintf(LOG_FILE, "\nЯ ЗАХОЖУ В ПОП\n");
     for (int i = 0; i < size; i++)
     {
-        fprintf(LOG_FILE, "%d\n", StackPop(&myStack, &stackErrors));
+        fprintf(LOG_FILE, "%lld\n", StackPop(&myStack, &stackErrors));  // Изменено на %lld
     }
 
-    StackDtor (&myStack, &stackErrors);
+    StackDtor(&myStack, &stackErrors);
 
     return 0;
 }
 
-void StackRellocUp(struct Stack *myStack, float koef_capacity, struct StackErrors* stackErrors)
+void StackRellocUp(struct Stack* myStack, float koef_capacity, struct StackErrors* stackErrors)
 {
     fprintf(LOG_FILE, "я - StackRellocUp1\n");
     STACK_VERIFY(myStack, stackErrors);
@@ -60,21 +60,27 @@ void StackRellocUp(struct Stack *myStack, float koef_capacity, struct StackError
     fprintf(LOG_FILE, "capacity!!!перед изменением = %d\n", myStack->capacity);
     myStack->capacity *= koef_capacity;
     fprintf(LOG_FILE, "capacity!!!после изменений = %d\n", myStack->capacity);
-    myStack->data = (Elem_t*)realloc(myStack->data, sizeof(Elem_t) * myStack->capacity + 2 * sizeof(BUF_CANARY));
+
+    // Используем realloc для изменения размера массива данных
+    myStack->data = (Elem_t*)realloc(myStack->data, sizeof(Elem_t) * myStack->capacity + 2 * sizeof(long long));
+
+    // Устанавливаем новые значения канареек
+    *(long long*)myStack->data = BUF_CANARY;
+    *(long long*)((char*)myStack->data + sizeof(long long) + sizeof(Elem_t) * myStack->capacity) = BUF_CANARY;
 }
 
 
-void StackDump(struct Stack* myStack, struct StackErrors* stackErrors, const char *file, int line, const char *function)
+void StackDump(struct Stack* myStack, struct StackErrors* stackErrors, const char* file, int line, const char* function)
 {
     fprintf(LOG_FILE, "\nTime is %s\n", __TIME__);
-    fprintf(LOG_FILE, "I'm stackDump called from %s (%d) %s\n", function, line, file);
+    fprintf(LOG_FILE, "ОШИБКААААААААААААА\n I'm stackDump called from %s (%d) %s\n", function, line, file);
     fprintf(LOG_FILE, "Stack[%p] \"myStack\" from %s(%d) in function - %s.\n", myStack->data, FILE, LINE, function);
 
     int now_size = myStack->size;
 
     for (int i = 0; i < now_size; i++)
     {
-        fprintf(LOG_FILE, "data[%d] = %d\n", i, myStack->data[i]);
+        fprintf(LOG_FILE, "data[%d] = %lld\n", i, myStack->data[i]);  // Изменено на %lld
     }
 
     fprintf(LOG_FILE, "size = %d\n", myStack->size);
@@ -85,11 +91,13 @@ void StackDump(struct Stack* myStack, struct StackErrors* stackErrors, const cha
 void StackCtor(struct Stack* myStack, struct StackErrors* stackErrors)
 {
     myStack->capacity = Capacity;
-    myStack->data = (Elem_t*)calloc(myStack->capacity * sizeof(Elem_t) + 2 * sizeof(BUF_CANARY), sizeof(char));
-    *(unsigned int *)myStack->data = BUF_CANARY;
-    *(unsigned int*)((char*) myStack->data + sizeof(BUF_CANARY) + sizeof(Elem_t) * myStack->capacity) = BUF_CANARY;
+    myStack->data = (Elem_t*)calloc(myStack->capacity * sizeof(Elem_t) + 2 * sizeof(long long), sizeof(char));  // Изменено на sizeof(long long)
+    *(long long*)myStack->data = BUF_CANARY;  // Изменено на long long
+    //printf ("канарейка начала - %lu\n", *(long long*)myStack->data);
+    *(long long*)((char*)myStack->data + sizeof(long long) + sizeof(Elem_t) * myStack->capacity) = BUF_CANARY;  // Изменено на long long
+    //printf ("канарейка начала - %lu\n", *(long long*)((char*)myStack->data + sizeof(long long) + sizeof(Elem_t) * myStack->capacity));
 
-    fprintf (LOG_FILE, "я в сторе\n");
+    fprintf(LOG_FILE, "я в сторе\n");
 
     myStack->size = 0;
     myStack->hash = CalculateHash(myStack); // Рассчитываем и сохраняем хэш-код
@@ -102,7 +110,7 @@ void StackCtor(struct Stack* myStack, struct StackErrors* stackErrors)
 
 void StackPush(struct Stack* myStack, Elem_t value, struct StackErrors* stackErrors)
 {
-   STACK_VERIFY(myStack, stackErrors);
+    STACK_VERIFY(myStack, stackErrors);
 
     if (myStack->size >= myStack->capacity)
     {
@@ -116,9 +124,10 @@ void StackPush(struct Stack* myStack, Elem_t value, struct StackErrors* stackErr
         StackRellocUp(myStack, koef_capacity, stackErrors);
     }
 
-    fprintf (LOG_FILE, "я в пуше\n");
+    fprintf(LOG_FILE, "я в пуше\n");
 
     myStack->data[myStack->size++] = value;
+    myStack -> hash = CalculateHash (myStack);
 
     STACK_VERIFY(myStack, stackErrors);
 }
@@ -133,27 +142,26 @@ void StackDtor(struct Stack* myStack, struct StackErrors* stackErrors)
 
 Elem_t StackPop(struct Stack* myStack, struct StackErrors* stackErrors)
 {
+    myStack -> hash = CalculateHash(myStack);
+    STACK_VERIFY(myStack, stackErrors);
     return myStack->data[--(myStack->size)];
 }
 
-unsigned int CalculateHash (struct Stack* myStack)
+unsigned int CalculateHash(struct Stack* myStack)
 {
     const char* data = (const char*)myStack->data;
     unsigned int hash = 0;
 
-    hash = (hash * HASH_CONST + sizeof(myStack->capacity)) % MOD_FOR_HASH;
-    hash = (hash * HASH_CONST + sizeof(Elem_t) * myStack->size) % MOD_FOR_HASH;
-
     for (int i = 0; i < myStack->size; i++)
     {
-        hash = (hash * HASH_CONST + data[i]);
+        hash = (hash * HASH_CONST + data[i]) % MOD_FOR_HASH;
     }
 
     return hash;
 }
 
-Elem_t* ReturnData (struct Stack* myStack)
+Elem_t* ReturnData(struct Stack* myStack)
 {
-    return myStack -> data + sizeof (BUF_CANARY);
+    return (Elem_t*)(myStack->data + sizeof(long long));  // Изменено на sizeof(long long)
 }
 

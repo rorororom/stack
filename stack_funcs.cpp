@@ -8,14 +8,39 @@
 #define LINE __LINE__
 #define FILE __FILE__
 
-typedef int Elem_t; // тип элементов стека
 
-void StackRellocUp(struct Stack *myStack, float koef_capacity, struct StackErrors* stackErrors)
+void StackFunc()
 {
-    *stackErrors = StackOk(myStack);
+    struct StackSimple myStack = {
+        NULL,
+        0,
+        0
+    };
+
+    struct StackErrorsSimple stackErrors = { };
+
+    StackCtorSimple(&myStack, &stackErrors);  // Передаем указатель на структуру myStack
+    for (int i = 1; i <= 10; i++) {
+        StackPushSimple(&myStack, i * 1, &stackErrors);  // Передаем указатель на структуру myStack
+    }
+
+    StackDumpSimple(&myStack, &stackErrors);  // Передаем указатель на структуру myStack
+
+    int size = myStack.size;  // Обращаемся к полю size без "->"
+    for (int i = 0; i < size; i++) {
+        fprintf(LOG_FILE, "%d\n", StackPopSimple(&myStack, &stackErrors));  // Передаем указатель на структуру myStack
+    }
+
+    StackDtorSimple(&myStack, &stackErrors);  // Передаем указатель на структуру myStack
+}
+
+
+void StackRellocUpSimple(struct StackSimple *myStack, float koef_capacity, struct StackErrorsSimple* stackErrors)
+{
+    *stackErrors = StackOkSimple(myStack);
 
     if (stackErrors -> ERROR_SIZE_BIT || stackErrors -> ERROR_CAPACITY_BIT || stackErrors -> ERROR_DATA_BIT) {
-        PrintStackErrors(stackErrors);
+        PrintStackErrorsSimple(stackErrors);
     }
 
     fprintf(LOG_FILE, "capacity!!!перед изменением = %d\n", myStack->capacity);
@@ -24,12 +49,12 @@ void StackRellocUp(struct Stack *myStack, float koef_capacity, struct StackError
     myStack->data = (Elem_t*)realloc(myStack->data, sizeof(Elem_t) * myStack->capacity);
 }
 
-void StackDump(struct Stack* myStack, struct StackErrors* stackErrors)
+void StackDumpSimple(struct StackSimple* myStack, struct StackErrorsSimple* stackErrors)
 {
-    *stackErrors = StackOk(myStack);
+    *stackErrors = StackOkSimple(myStack);
 
     if (stackErrors -> ERROR_SIZE_BIT || stackErrors -> ERROR_CAPACITY_BIT || stackErrors -> ERROR_DATA_BIT) {
-        PrintStackErrors(stackErrors);
+        PrintStackErrorsSimple(stackErrors);
     }
 
     fprintf(LOG_FILE, "\nTime is %s\n", __TIME__);
@@ -45,7 +70,7 @@ void StackDump(struct Stack* myStack, struct StackErrors* stackErrors)
     fprintf(LOG_FILE, "data[%p]\n", myStack->data);
 }
 
-void PrintStackErrors(struct StackErrors* stackErrors)
+void PrintStackErrorsSimple(struct StackErrorsSimple* stackErrors)
 {
     if (stackErrors -> ERROR_SIZE_BIT) {
         fprintf(stderr, "Ошибка: Превышен размер стека\n");
@@ -61,9 +86,9 @@ void PrintStackErrors(struct StackErrors* stackErrors)
     }
 }
 
-struct StackErrors StackOk(struct Stack* myStack)
+struct StackErrorsSimple StackOkSimple(struct StackSimple* myStack)
 {
-    struct StackErrors errorFlags = { 0, 0, 0, 0 };
+    struct StackErrorsSimple errorFlags = { 0, 0, 0, 0 };
 
     if (myStack->size > myStack->capacity) {
         errorFlags.ERROR_SIZE_BIT = 1;
@@ -80,36 +105,36 @@ struct StackErrors StackOk(struct Stack* myStack)
     return errorFlags;
 }
 
-void StackCtor(struct Stack* myStack, struct StackErrors* stackErrors)
+void StackCtorSimple(struct StackSimple* myStack, struct StackErrorsSimple* stackErrors)
 {
-    myStack->data = (Elem_t*)calloc(Capacity, sizeof(Elem_t));
-    myStack->capacity = Capacity;
+    myStack->data = (Elem_t*)calloc(Capacity_stack, sizeof(Elem_t));
+    myStack->capacity = Capacity_stack;
     myStack->size = 0;
 }
 
-void StackPush(struct Stack* myStack, Elem_t value, struct StackErrors* stackErrors)
+void StackPushSimple(struct StackSimple* myStack, Elem_t value, struct StackErrorsSimple* stackErrors)
 {
-    *stackErrors = StackOk(myStack);
+    *stackErrors = StackOkSimple(myStack);
 
     if (stackErrors -> ERROR_SIZE_BIT || stackErrors -> ERROR_CAPACITY_BIT || stackErrors -> ERROR_DATA_BIT) {
-        PrintStackErrors(stackErrors);
+        PrintStackErrorsSimple(stackErrors);
     }
 
     if (myStack->size >= myStack->capacity) {
         float koef_capacity = 2.0;
-        StackRellocUp(myStack, koef_capacity, stackErrors);
+        StackRellocUpSimple(myStack, koef_capacity, stackErrors);
     }
 
     else if (myStack->size <= myStack->capacity / 2)
     {
         float koef_capacity = 0.5;
-        StackRellocUp(myStack, koef_capacity, stackErrors);
+        StackRellocUpSimple(myStack, koef_capacity, stackErrors);
     }
 
     myStack->data[myStack->size++] = value;
 }
 
-void StackDtor(struct Stack* myStack, struct StackErrors* stackErrors)
+void StackDtorSimple(struct StackSimple* myStack, struct StackErrorsSimple* stackErrors)
 {
     free(myStack->data);
     myStack->data = NULL;
@@ -117,47 +142,16 @@ void StackDtor(struct Stack* myStack, struct StackErrors* stackErrors)
     myStack->size = 0;
 }
 
-Elem_t StackPop(struct Stack* myStack, struct StackErrors* stackErrors)
+Elem_t StackPopSimple(struct StackSimple* myStack, struct StackErrorsSimple* stackErrors)
 {
-    *stackErrors = StackOk(myStack);
+    *stackErrors = StackOkSimple(myStack);
 
     if (stackErrors -> ERROR_SIZE_BIT || stackErrors -> ERROR_CAPACITY_BIT || stackErrors -> ERROR_DATA_BIT) {
-        PrintStackErrors(stackErrors);
+        PrintStackErrorsSimple(stackErrors);
     }
 
     return myStack->data[--myStack->size];
 }
 
-int StackFunc ()
-{
-    Stack myStack = {
-        NULL,
-        0,
-        0
-    };
-
-    struct StackErrors stackErrors = {
-        (1 << 0), // ERROR_SIZE_BIT
-        (1 << 1), // ERROR_CAPACITY_BIT
-        (1 << 2), // ERROR_DATA_BIT
-        (1 << 3)  // ERROR_PUSH_BIT
-    };
-
-    StackCtor(myStack, &stackErrors);
-    for (int i = 1; i <= 10; i++) {
-        StackPush(myStack, i * 1, &stackErrors);
-    }
-
-    StackDump (myStack, &stackErrors);
-
-    int size = myStack -> size;
-    for (int i = 0; i < size; i++) {
-        fprintf(LOG_FILE, "%d\n", StackPop(myStack, &stackErrors));
-    }
-
-    StackDtor (myStack, &stackErrors);
-
-    return 0;
-}
 
 

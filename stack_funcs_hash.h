@@ -3,11 +3,11 @@ typedef int Elem_t; // тип элементов стека
 const int Capacity = 100;
 const int HASH_CONST = 234;
 const int MOD_FOR_HASH = 107;
-const int SIZE = 20;
+const int SIZE = 5;
 
-const uint32_t Start = 0xDEADBEEF;
-const uint32_t End = 0xFEEDBEEF;
-const unsigned int BUF_CANARY = 100;
+//const uint32_t Start = 0xDEADBEEF;
+//const uint32_t End = 0xFEEDBEEF;
+const long long BUF_CANARY =  0xDEADBEEF;
 
 enum eroor {
     ERROR = -1

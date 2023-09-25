@@ -19856,3 +19856,2519 @@ data[0x7fcfe0c05a60]
 ОТКРЫТ ФАЙЛ
 ЗАКРЫТ ФАЙЛ
 \----------------------------------------------------\
+\----------------------------------------------------\
+ОТКРЫТ ФАЙЛ
+я в сторе
+CalculateHash = 80
+myStack->hash = 80
+я - StackRellocUp1
+я - StackRellocUp
+capacity!!!перед изменением = 100
+capacity!!!после изменений = 50
+я в пуше
+
+Time is 10:25:50
+I'm stackDump called from StackPush (119) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+size = 1
+capacity = 50
+data[0x7fa3dfc05a60]
+
+Time is 10:25:50
+I'm stackDump called from StackPush (102) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+size = 1
+capacity = 50
+data[0x7fa3dfc05a60]
+я - StackRellocUp1
+
+Time is 10:25:50
+I'm stackDump called from StackRellocUp (55) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackRellocUp.
+data[0] = 0
+size = 1
+capacity = 50
+data[0x7fa3dfc05a60]
+я - StackRellocUp
+capacity!!!перед изменением = 50
+capacity!!!после изменений = 25
+я в пуше
+
+Time is 10:25:50
+I'm stackDump called from StackPush (119) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+size = 2
+capacity = 25
+data[0x7fa3dfc05a60]
+
+Time is 10:25:50
+I'm stackDump called from StackPush (102) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+size = 2
+capacity = 25
+data[0x7fa3dfc05a60]
+я - StackRellocUp1
+
+Time is 10:25:50
+I'm stackDump called from StackRellocUp (55) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackRellocUp.
+data[0] = 0
+data[1] = 10
+size = 2
+capacity = 25
+data[0x7fa3dfc05a60]
+я - StackRellocUp
+capacity!!!перед изменением = 25
+capacity!!!после изменений = 12
+я в пуше
+
+Time is 10:25:50
+I'm stackDump called from StackPush (119) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+size = 3
+capacity = 12
+data[0x7fa3dfc05a60]
+
+Time is 10:25:50
+I'm stackDump called from StackPush (102) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+size = 3
+capacity = 12
+data[0x7fa3dfc05a60]
+я - StackRellocUp1
+
+Time is 10:25:50
+I'm stackDump called from StackRellocUp (55) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackRellocUp.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+size = 3
+capacity = 12
+data[0x7fa3dfc05a60]
+я - StackRellocUp
+capacity!!!перед изменением = 12
+capacity!!!после изменений = 6
+я в пуше
+
+Time is 10:25:50
+I'm stackDump called from StackPush (119) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+size = 4
+capacity = 6
+data[0x7fa3dfc05a60]
+
+Time is 10:25:50
+I'm stackDump called from StackPush (102) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+size = 4
+capacity = 6
+data[0x7fa3dfc05a60]
+я в пуше
+
+Time is 10:25:50
+I'm stackDump called from StackPush (119) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+size = 5
+capacity = 6
+data[0x7fa3dfc05a60]
+
+Time is 10:25:50
+I'm stackDump called from StackPush (102) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+size = 5
+capacity = 6
+data[0x7fa3dfc05a60]
+я в пуше
+
+Time is 10:25:50
+I'm stackDump called from StackPush (119) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+size = 6
+capacity = 6
+data[0x7fa3dfc05a60]
+
+Time is 10:25:50
+I'm stackDump called from StackPush (102) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+size = 6
+capacity = 6
+data[0x7fa3dfc05a60]
+я - StackRellocUp1
+
+Time is 10:25:50
+I'm stackDump called from StackRellocUp (55) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackRellocUp.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+size = 6
+capacity = 6
+data[0x7fa3dfc05a60]
+я - StackRellocUp
+capacity!!!перед изменением = 6
+capacity!!!после изменений = 12
+я в пуше
+
+Time is 10:25:50
+I'm stackDump called from StackPush (119) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+size = 7
+capacity = 12
+data[0x7fa3dfc05a60]
+
+Time is 10:25:50
+I'm stackDump called from StackPush (102) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+size = 7
+capacity = 12
+data[0x7fa3dfc05a60]
+я в пуше
+
+Time is 10:25:50
+I'm stackDump called from StackPush (119) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+size = 8
+capacity = 12
+data[0x7fa3dfc05a60]
+
+Time is 10:25:50
+I'm stackDump called from StackPush (102) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+size = 8
+capacity = 12
+data[0x7fa3dfc05a60]
+я в пуше
+
+Time is 10:25:50
+I'm stackDump called from StackPush (119) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+size = 9
+capacity = 12
+data[0x7fa3dfc05a60]
+
+Time is 10:25:50
+I'm stackDump called from StackPush (102) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+size = 9
+capacity = 12
+data[0x7fa3dfc05a60]
+я в пуше
+
+Time is 10:25:50
+I'm stackDump called from StackPush (119) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+size = 10
+capacity = 12
+data[0x7fa3dfc05a60]
+
+Time is 10:25:50
+I'm stackDump called from StackPush (102) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+size = 10
+capacity = 12
+data[0x7fa3dfc05a60]
+я в пуше
+
+Time is 10:25:50
+I'm stackDump called from StackPush (119) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+size = 11
+capacity = 12
+data[0x7fa3dfc05a60]
+
+Time is 10:25:50
+I'm stackDump called from StackPush (102) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+size = 11
+capacity = 12
+data[0x7fa3dfc05a60]
+я в пуше
+
+Time is 10:25:50
+I'm stackDump called from StackPush (119) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+size = 12
+capacity = 12
+data[0x7fa3dfc05a60]
+
+Time is 10:25:50
+I'm stackDump called from StackPush (102) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+size = 12
+capacity = 12
+data[0x7fa3dfc05a60]
+я - StackRellocUp1
+
+Time is 10:25:50
+I'm stackDump called from StackRellocUp (55) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackRellocUp.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+size = 12
+capacity = 12
+data[0x7fa3dfc05a60]
+я - StackRellocUp
+capacity!!!перед изменением = 12
+capacity!!!после изменений = 24
+я в пуше
+
+Time is 10:25:50
+I'm stackDump called from StackPush (119) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+size = 13
+capacity = 24
+data[0x7fa3dfc05a60]
+
+Time is 10:25:50
+I'm stackDump called from StackPush (102) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+size = 13
+capacity = 24
+data[0x7fa3dfc05a60]
+я в пуше
+
+Time is 10:25:50
+I'm stackDump called from StackPush (119) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+data[13] = 130
+size = 14
+capacity = 24
+data[0x7fa3dfc05a60]
+
+Time is 10:25:50
+I'm stackDump called from StackPush (102) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+data[13] = 130
+size = 14
+capacity = 24
+data[0x7fa3dfc05a60]
+я в пуше
+
+Time is 10:25:50
+I'm stackDump called from StackPush (119) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+data[13] = 130
+data[14] = 140
+size = 15
+capacity = 24
+data[0x7fa3dfc05a60]
+
+Time is 10:25:50
+I'm stackDump called from StackPush (102) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+data[13] = 130
+data[14] = 140
+size = 15
+capacity = 24
+data[0x7fa3dfc05a60]
+я в пуше
+
+Time is 10:25:50
+I'm stackDump called from StackPush (119) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+data[13] = 130
+data[14] = 140
+data[15] = 150
+size = 16
+capacity = 24
+data[0x7fa3dfc05a60]
+
+Time is 10:25:50
+I'm stackDump called from StackPush (102) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+data[13] = 130
+data[14] = 140
+data[15] = 150
+size = 16
+capacity = 24
+data[0x7fa3dfc05a60]
+я в пуше
+
+Time is 10:25:50
+I'm stackDump called from StackPush (119) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+data[13] = 130
+data[14] = 140
+data[15] = 150
+data[16] = 160
+size = 17
+capacity = 24
+data[0x7fa3dfc05a60]
+
+Time is 10:25:50
+I'm stackDump called from StackPush (102) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+data[13] = 130
+data[14] = 140
+data[15] = 150
+data[16] = 160
+size = 17
+capacity = 24
+data[0x7fa3dfc05a60]
+я в пуше
+
+Time is 10:25:50
+I'm stackDump called from StackPush (119) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+data[13] = 130
+data[14] = 140
+data[15] = 150
+data[16] = 160
+data[17] = 170
+size = 18
+capacity = 24
+data[0x7fa3dfc05a60]
+
+Time is 10:25:50
+I'm stackDump called from StackPush (102) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+data[13] = 130
+data[14] = 140
+data[15] = 150
+data[16] = 160
+data[17] = 170
+size = 18
+capacity = 24
+data[0x7fa3dfc05a60]
+я в пуше
+
+Time is 10:25:50
+I'm stackDump called from StackPush (119) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+data[13] = 130
+data[14] = 140
+data[15] = 150
+data[16] = 160
+data[17] = 170
+data[18] = 180
+size = 19
+capacity = 24
+data[0x7fa3dfc05a60]
+
+Time is 10:25:50
+I'm stackDump called from StackPush (102) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+data[13] = 130
+data[14] = 140
+data[15] = 150
+data[16] = 160
+data[17] = 170
+data[18] = 180
+size = 19
+capacity = 24
+data[0x7fa3dfc05a60]
+я в пуше
+
+Time is 10:25:50
+I'm stackDump called from StackPush (119) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+data[13] = 130
+data[14] = 140
+data[15] = 150
+data[16] = 160
+data[17] = 170
+data[18] = 180
+data[19] = 190
+size = 20
+capacity = 24
+data[0x7fa3dfc05a60]
+
+Time is 10:25:50
+I'm stackDump called from StackPush (102) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+data[13] = 130
+data[14] = 140
+data[15] = 150
+data[16] = 160
+data[17] = 170
+data[18] = 180
+data[19] = 190
+size = 20
+capacity = 24
+data[0x7fa3dfc05a60]
+я в пуше
+
+Time is 10:25:50
+I'm stackDump called from StackPush (119) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+data[13] = 130
+data[14] = 140
+data[15] = 150
+data[16] = 160
+data[17] = 170
+data[18] = 180
+data[19] = 190
+data[20] = 200
+size = 21
+capacity = 24
+data[0x7fa3dfc05a60]
+
+Time is 10:25:50
+I'm stackDump called from StackPop (132) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPop.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+data[13] = 130
+data[14] = 140
+data[15] = 150
+data[16] = 160
+data[17] = 170
+data[18] = 180
+data[19] = 190
+data[20] = 200
+size = 21
+capacity = 24
+data[0x7fa3dfc05a60]
+200
+
+Time is 10:25:50
+I'm stackDump called from StackPop (132) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPop.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+data[13] = 130
+data[14] = 140
+data[15] = 150
+data[16] = 160
+data[17] = 170
+data[18] = 180
+data[19] = 190
+size = 20
+capacity = 24
+data[0x7fa3dfc05a60]
+190
+
+Time is 10:25:50
+I'm stackDump called from StackPop (132) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPop.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+data[13] = 130
+data[14] = 140
+data[15] = 150
+data[16] = 160
+data[17] = 170
+data[18] = 180
+size = 19
+capacity = 24
+data[0x7fa3dfc05a60]
+180
+
+Time is 10:25:50
+I'm stackDump called from StackPop (132) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPop.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+data[13] = 130
+data[14] = 140
+data[15] = 150
+data[16] = 160
+data[17] = 170
+size = 18
+capacity = 24
+data[0x7fa3dfc05a60]
+170
+
+Time is 10:25:50
+I'm stackDump called from StackPop (132) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPop.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+data[13] = 130
+data[14] = 140
+data[15] = 150
+data[16] = 160
+size = 17
+capacity = 24
+data[0x7fa3dfc05a60]
+160
+
+Time is 10:25:50
+I'm stackDump called from StackPop (132) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPop.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+data[13] = 130
+data[14] = 140
+data[15] = 150
+size = 16
+capacity = 24
+data[0x7fa3dfc05a60]
+150
+
+Time is 10:25:50
+I'm stackDump called from StackPop (132) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPop.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+data[13] = 130
+data[14] = 140
+size = 15
+capacity = 24
+data[0x7fa3dfc05a60]
+140
+
+Time is 10:25:50
+I'm stackDump called from StackPop (132) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPop.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+data[13] = 130
+size = 14
+capacity = 24
+data[0x7fa3dfc05a60]
+130
+
+Time is 10:25:50
+I'm stackDump called from StackPop (132) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPop.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+size = 13
+capacity = 24
+data[0x7fa3dfc05a60]
+120
+
+Time is 10:25:50
+I'm stackDump called from StackPop (132) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPop.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+size = 12
+capacity = 24
+data[0x7fa3dfc05a60]
+110
+
+Time is 10:25:50
+I'm stackDump called from StackPop (132) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPop.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+size = 11
+capacity = 24
+data[0x7fa3dfc05a60]
+100
+
+Time is 10:25:50
+I'm stackDump called from StackPop (132) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPop.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+size = 10
+capacity = 24
+data[0x7fa3dfc05a60]
+90
+
+Time is 10:25:50
+I'm stackDump called from StackPop (132) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPop.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+size = 9
+capacity = 24
+data[0x7fa3dfc05a60]
+80
+
+Time is 10:25:50
+I'm stackDump called from StackPop (132) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPop.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+size = 8
+capacity = 24
+data[0x7fa3dfc05a60]
+70
+
+Time is 10:25:50
+I'm stackDump called from StackPop (132) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPop.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+size = 7
+capacity = 24
+data[0x7fa3dfc05a60]
+60
+
+Time is 10:25:50
+I'm stackDump called from StackPop (132) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPop.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+size = 6
+capacity = 24
+data[0x7fa3dfc05a60]
+50
+
+Time is 10:25:50
+I'm stackDump called from StackPop (132) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPop.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+size = 5
+capacity = 24
+data[0x7fa3dfc05a60]
+40
+
+Time is 10:25:50
+I'm stackDump called from StackPop (132) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPop.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+size = 4
+capacity = 24
+data[0x7fa3dfc05a60]
+30
+
+Time is 10:25:50
+I'm stackDump called from StackPop (132) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPop.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+size = 3
+capacity = 24
+data[0x7fa3dfc05a60]
+20
+
+Time is 10:25:50
+I'm stackDump called from StackPop (132) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPop.
+data[0] = 0
+data[1] = 10
+size = 2
+capacity = 24
+data[0x7fa3dfc05a60]
+10
+
+Time is 10:25:50
+I'm stackDump called from StackPop (132) stack_funcs_hash.cpp
+Stack[0x7fa3dfc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPop.
+data[0] = 0
+size = 1
+capacity = 24
+data[0x7fa3dfc05a60]
+0
+ЗАКРЫТ ФАЙЛ
+\----------------------------------------------------\
+\----------------------------------------------------\
+ОТКРЫТ ФАЙЛ
+я в сторе
+CalculateHash = 80
+myStack->hash = 80
+я - StackRellocUp1
+я - StackRellocUp
+capacity!!!перед изменением = 100
+capacity!!!после изменений = 50
+я в пуше
+
+Time is 10:27:36
+I'm stackDump called from StackPush (119) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+size = 1
+capacity = 50
+data[0x7fa69dc05a60]
+
+Time is 10:27:36
+I'm stackDump called from StackPush (102) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+size = 1
+capacity = 50
+data[0x7fa69dc05a60]
+я - StackRellocUp1
+
+Time is 10:27:36
+I'm stackDump called from StackRellocUp (55) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackRellocUp.
+data[0] = 0
+size = 1
+capacity = 50
+data[0x7fa69dc05a60]
+я - StackRellocUp
+capacity!!!перед изменением = 50
+capacity!!!после изменений = 25
+я в пуше
+
+Time is 10:27:36
+I'm stackDump called from StackPush (119) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+size = 2
+capacity = 25
+data[0x7fa69dc05a60]
+
+Time is 10:27:36
+I'm stackDump called from StackPush (102) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+size = 2
+capacity = 25
+data[0x7fa69dc05a60]
+я - StackRellocUp1
+
+Time is 10:27:36
+I'm stackDump called from StackRellocUp (55) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackRellocUp.
+data[0] = 0
+data[1] = 10
+size = 2
+capacity = 25
+data[0x7fa69dc05a60]
+я - StackRellocUp
+capacity!!!перед изменением = 25
+capacity!!!после изменений = 12
+я в пуше
+
+Time is 10:27:36
+I'm stackDump called from StackPush (119) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+size = 3
+capacity = 12
+data[0x7fa69dc05a60]
+
+Time is 10:27:36
+I'm stackDump called from StackPush (102) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+size = 3
+capacity = 12
+data[0x7fa69dc05a60]
+я - StackRellocUp1
+
+Time is 10:27:36
+I'm stackDump called from StackRellocUp (55) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackRellocUp.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+size = 3
+capacity = 12
+data[0x7fa69dc05a60]
+я - StackRellocUp
+capacity!!!перед изменением = 12
+capacity!!!после изменений = 6
+я в пуше
+
+Time is 10:27:36
+I'm stackDump called from StackPush (119) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+size = 4
+capacity = 6
+data[0x7fa69dc05a60]
+
+Time is 10:27:36
+I'm stackDump called from StackPush (102) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+size = 4
+capacity = 6
+data[0x7fa69dc05a60]
+я в пуше
+
+Time is 10:27:36
+I'm stackDump called from StackPush (119) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+size = 5
+capacity = 6
+data[0x7fa69dc05a60]
+
+Time is 10:27:36
+I'm stackDump called from StackPush (102) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+size = 5
+capacity = 6
+data[0x7fa69dc05a60]
+я в пуше
+
+Time is 10:27:36
+I'm stackDump called from StackPush (119) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+size = 6
+capacity = 6
+data[0x7fa69dc05a60]
+
+Time is 10:27:36
+I'm stackDump called from StackPush (102) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+size = 6
+capacity = 6
+data[0x7fa69dc05a60]
+я - StackRellocUp1
+
+Time is 10:27:36
+I'm stackDump called from StackRellocUp (55) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackRellocUp.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+size = 6
+capacity = 6
+data[0x7fa69dc05a60]
+я - StackRellocUp
+capacity!!!перед изменением = 6
+capacity!!!после изменений = 12
+я в пуше
+
+Time is 10:27:36
+I'm stackDump called from StackPush (119) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+size = 7
+capacity = 12
+data[0x7fa69dc05a60]
+
+Time is 10:27:36
+I'm stackDump called from StackPush (102) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+size = 7
+capacity = 12
+data[0x7fa69dc05a60]
+я в пуше
+
+Time is 10:27:36
+I'm stackDump called from StackPush (119) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+size = 8
+capacity = 12
+data[0x7fa69dc05a60]
+
+Time is 10:27:36
+I'm stackDump called from StackPush (102) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+size = 8
+capacity = 12
+data[0x7fa69dc05a60]
+я в пуше
+
+Time is 10:27:36
+I'm stackDump called from StackPush (119) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+size = 9
+capacity = 12
+data[0x7fa69dc05a60]
+
+Time is 10:27:36
+I'm stackDump called from StackPush (102) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+size = 9
+capacity = 12
+data[0x7fa69dc05a60]
+я в пуше
+
+Time is 10:27:36
+I'm stackDump called from StackPush (119) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+size = 10
+capacity = 12
+data[0x7fa69dc05a60]
+
+Time is 10:27:36
+I'm stackDump called from StackPush (102) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+size = 10
+capacity = 12
+data[0x7fa69dc05a60]
+я в пуше
+
+Time is 10:27:36
+I'm stackDump called from StackPush (119) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+size = 11
+capacity = 12
+data[0x7fa69dc05a60]
+
+Time is 10:27:36
+I'm stackDump called from StackPush (102) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+size = 11
+capacity = 12
+data[0x7fa69dc05a60]
+я в пуше
+
+Time is 10:27:36
+I'm stackDump called from StackPush (119) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+size = 12
+capacity = 12
+data[0x7fa69dc05a60]
+
+Time is 10:27:36
+I'm stackDump called from StackPush (102) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+size = 12
+capacity = 12
+data[0x7fa69dc05a60]
+я - StackRellocUp1
+
+Time is 10:27:36
+I'm stackDump called from StackRellocUp (55) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackRellocUp.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+size = 12
+capacity = 12
+data[0x7fa69dc05a60]
+я - StackRellocUp
+capacity!!!перед изменением = 12
+capacity!!!после изменений = 24
+я в пуше
+
+Time is 10:27:36
+I'm stackDump called from StackPush (119) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+size = 13
+capacity = 24
+data[0x7fa69dc05a60]
+
+Time is 10:27:36
+I'm stackDump called from StackPush (102) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+size = 13
+capacity = 24
+data[0x7fa69dc05a60]
+я в пуше
+
+Time is 10:27:36
+I'm stackDump called from StackPush (119) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+data[13] = 130
+size = 14
+capacity = 24
+data[0x7fa69dc05a60]
+
+Time is 10:27:36
+I'm stackDump called from StackPush (102) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+data[13] = 130
+size = 14
+capacity = 24
+data[0x7fa69dc05a60]
+я в пуше
+
+Time is 10:27:36
+I'm stackDump called from StackPush (119) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+data[13] = 130
+data[14] = 140
+size = 15
+capacity = 24
+data[0x7fa69dc05a60]
+
+Time is 10:27:36
+I'm stackDump called from StackPush (102) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+data[13] = 130
+data[14] = 140
+size = 15
+capacity = 24
+data[0x7fa69dc05a60]
+я в пуше
+
+Time is 10:27:36
+I'm stackDump called from StackPush (119) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+data[13] = 130
+data[14] = 140
+data[15] = 150
+size = 16
+capacity = 24
+data[0x7fa69dc05a60]
+
+Time is 10:27:36
+I'm stackDump called from StackPush (102) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+data[13] = 130
+data[14] = 140
+data[15] = 150
+size = 16
+capacity = 24
+data[0x7fa69dc05a60]
+я в пуше
+
+Time is 10:27:36
+I'm stackDump called from StackPush (119) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+data[13] = 130
+data[14] = 140
+data[15] = 150
+data[16] = 160
+size = 17
+capacity = 24
+data[0x7fa69dc05a60]
+
+Time is 10:27:36
+I'm stackDump called from StackPush (102) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+data[13] = 130
+data[14] = 140
+data[15] = 150
+data[16] = 160
+size = 17
+capacity = 24
+data[0x7fa69dc05a60]
+я в пуше
+
+Time is 10:27:36
+I'm stackDump called from StackPush (119) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+data[13] = 130
+data[14] = 140
+data[15] = 150
+data[16] = 160
+data[17] = 170
+size = 18
+capacity = 24
+data[0x7fa69dc05a60]
+
+Time is 10:27:36
+I'm stackDump called from StackPush (102) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+data[13] = 130
+data[14] = 140
+data[15] = 150
+data[16] = 160
+data[17] = 170
+size = 18
+capacity = 24
+data[0x7fa69dc05a60]
+я в пуше
+
+Time is 10:27:36
+I'm stackDump called from StackPush (119) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+data[13] = 130
+data[14] = 140
+data[15] = 150
+data[16] = 160
+data[17] = 170
+data[18] = 180
+size = 19
+capacity = 24
+data[0x7fa69dc05a60]
+
+Time is 10:27:36
+I'm stackDump called from StackPush (102) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+data[13] = 130
+data[14] = 140
+data[15] = 150
+data[16] = 160
+data[17] = 170
+data[18] = 180
+size = 19
+capacity = 24
+data[0x7fa69dc05a60]
+я в пуше
+
+Time is 10:27:36
+I'm stackDump called from StackPush (119) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+data[13] = 130
+data[14] = 140
+data[15] = 150
+data[16] = 160
+data[17] = 170
+data[18] = 180
+data[19] = 190
+size = 20
+capacity = 24
+data[0x7fa69dc05a60]
+
+Time is 10:27:36
+I'm stackDump called from StackPush (102) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+data[13] = 130
+data[14] = 140
+data[15] = 150
+data[16] = 160
+data[17] = 170
+data[18] = 180
+data[19] = 190
+size = 20
+capacity = 24
+data[0x7fa69dc05a60]
+я в пуше
+
+Time is 10:27:36
+I'm stackDump called from StackPush (119) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPush.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+data[13] = 130
+data[14] = 140
+data[15] = 150
+data[16] = 160
+data[17] = 170
+data[18] = 180
+data[19] = 190
+data[20] = 200
+size = 21
+capacity = 24
+data[0x7fa69dc05a60]
+
+Time is 10:27:36
+I'm stackDump called from StackPop (132) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPop.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+data[13] = 130
+data[14] = 140
+data[15] = 150
+data[16] = 160
+data[17] = 170
+data[18] = 180
+data[19] = 190
+data[20] = 200
+size = 21
+capacity = 24
+data[0x7fa69dc05a60]
+200
+
+Time is 10:27:36
+I'm stackDump called from StackPop (132) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPop.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+data[13] = 130
+data[14] = 140
+data[15] = 150
+data[16] = 160
+data[17] = 170
+data[18] = 180
+data[19] = 190
+size = 20
+capacity = 24
+data[0x7fa69dc05a60]
+190
+
+Time is 10:27:36
+I'm stackDump called from StackPop (132) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPop.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+data[13] = 130
+data[14] = 140
+data[15] = 150
+data[16] = 160
+data[17] = 170
+data[18] = 180
+size = 19
+capacity = 24
+data[0x7fa69dc05a60]
+180
+
+Time is 10:27:36
+I'm stackDump called from StackPop (132) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPop.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+data[13] = 130
+data[14] = 140
+data[15] = 150
+data[16] = 160
+data[17] = 170
+size = 18
+capacity = 24
+data[0x7fa69dc05a60]
+170
+
+Time is 10:27:36
+I'm stackDump called from StackPop (132) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPop.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+data[13] = 130
+data[14] = 140
+data[15] = 150
+data[16] = 160
+size = 17
+capacity = 24
+data[0x7fa69dc05a60]
+160
+
+Time is 10:27:36
+I'm stackDump called from StackPop (132) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPop.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+data[13] = 130
+data[14] = 140
+data[15] = 150
+size = 16
+capacity = 24
+data[0x7fa69dc05a60]
+150
+
+Time is 10:27:36
+I'm stackDump called from StackPop (132) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPop.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+data[13] = 130
+data[14] = 140
+size = 15
+capacity = 24
+data[0x7fa69dc05a60]
+140
+
+Time is 10:27:36
+I'm stackDump called from StackPop (132) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPop.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+data[13] = 130
+size = 14
+capacity = 24
+data[0x7fa69dc05a60]
+130
+
+Time is 10:27:36
+I'm stackDump called from StackPop (132) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPop.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+data[12] = 120
+size = 13
+capacity = 24
+data[0x7fa69dc05a60]
+120
+
+Time is 10:27:36
+I'm stackDump called from StackPop (132) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPop.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+data[11] = 110
+size = 12
+capacity = 24
+data[0x7fa69dc05a60]
+110
+
+Time is 10:27:36
+I'm stackDump called from StackPop (132) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPop.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+data[10] = 100
+size = 11
+capacity = 24
+data[0x7fa69dc05a60]
+100
+
+Time is 10:27:36
+I'm stackDump called from StackPop (132) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPop.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+data[9] = 90
+size = 10
+capacity = 24
+data[0x7fa69dc05a60]
+90
+
+Time is 10:27:36
+I'm stackDump called from StackPop (132) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPop.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+data[8] = 80
+size = 9
+capacity = 24
+data[0x7fa69dc05a60]
+80
+
+Time is 10:27:36
+I'm stackDump called from StackPop (132) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPop.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+data[7] = 70
+size = 8
+capacity = 24
+data[0x7fa69dc05a60]
+70
+
+Time is 10:27:36
+I'm stackDump called from StackPop (132) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPop.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+data[6] = 60
+size = 7
+capacity = 24
+data[0x7fa69dc05a60]
+60
+
+Time is 10:27:36
+I'm stackDump called from StackPop (132) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPop.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+data[5] = 50
+size = 6
+capacity = 24
+data[0x7fa69dc05a60]
+50
+
+Time is 10:27:36
+I'm stackDump called from StackPop (132) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPop.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+data[4] = 40
+size = 5
+capacity = 24
+data[0x7fa69dc05a60]
+40
+
+Time is 10:27:36
+I'm stackDump called from StackPop (132) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPop.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+data[3] = 30
+size = 4
+capacity = 24
+data[0x7fa69dc05a60]
+30
+
+Time is 10:27:36
+I'm stackDump called from StackPop (132) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPop.
+data[0] = 0
+data[1] = 10
+data[2] = 20
+size = 3
+capacity = 24
+data[0x7fa69dc05a60]
+20
+
+Time is 10:27:36
+I'm stackDump called from StackPop (132) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPop.
+data[0] = 0
+data[1] = 10
+size = 2
+capacity = 24
+data[0x7fa69dc05a60]
+10
+
+Time is 10:27:36
+I'm stackDump called from StackPop (132) stack_funcs_hash.cpp
+Stack[0x7fa69dc05a60] "myStack" from stack_funcs_hash.cpp(69) in function - StackPop.
+data[0] = 0
+size = 1
+capacity = 24
+data[0x7fa69dc05a60]
+0
+ЗАКРЫТ ФАЙЛ
+\----------------------------------------------------\
+\----------------------------------------------------\
+ОТКРЫТ ФАЙЛ
+capacity!!!перед изменением = 100
+capacity!!!после изменений = 50
+capacity!!!перед изменением = 50
+capacity!!!после изменений = 25
+capacity!!!перед изменением = 25
+capacity!!!после изменений = 12
+capacity!!!перед изменением = 12
+capacity!!!после изменений = 6
+capacity!!!перед изменением = 6
+capacity!!!после изменений = 12
+
+Time is 10:38:11
+Stack[0x7f88e5405a60] "myStack" from stack_funcs.cpp(61) in function - StackDumpSimple.
+data[0] = 1
+data[1] = 2
+data[2] = 3
+data[3] = 4
+data[4] = 5
+data[5] = 6
+data[6] = 7
+data[7] = 8
+data[8] = 9
+data[9] = 10
+size = 10
+capacity = 12
+data[0x7f88e5405a60]
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+ЗАКРЫТ ФАЙЛ
+\----------------------------------------------------\

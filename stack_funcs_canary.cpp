@@ -69,7 +69,7 @@ void StackDump(struct Stack* myStack, struct StackErrors* stackErrors)
         stackErrors -> ERROR_DATA_BIT || stackErrors -> ERROR_CANARY_START_BIT ||
         stackErrors -> ERROR_CANARY_END_BIT)
     {
-        PrintStackErrors(stackErrors);
+        //PrintStackErrors(stackErrors);
     }
 
     fprintf(LOG_FILE, "\nTime is %s\n", __TIME__);
