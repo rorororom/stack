@@ -14,11 +14,11 @@ void CloseLogFile()
     fclose (LOG_FILE);
 }
 
-void OpenLogFile (const char* FILE_NAME)
+void OpenLogFile (const char* FILE_NAME, const char* mode)
 {
     char* file_name = strdup (FILE_NAME);
 
-    LOG_FILE = fopen (strcat(file_name, EXTENSION), "a");
+    LOG_FILE = fopen (strcat(file_name, EXTENSION), mode);
 
     if (LOG_FILE == nullptr)
     {

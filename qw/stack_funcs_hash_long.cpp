@@ -36,6 +36,8 @@ int StackFuncHash()
 
     for (int i = 1; i <= SIZE; i++)
     {
+        long long knr = *(long long*)myStack.data;
+        printf ("первая канарейка 1- %lu\n", knr);
         StackPush(&myStack, i * 10, &stackErrors);
     }
 
@@ -43,6 +45,7 @@ int StackFuncHash()
     fprintf(LOG_FILE, "\nЯ ЗАХОЖУ В ПОП\n");
     for (int i = 0; i < size; i++)
     {
+        myStack.hash = CalculateHash(&myStack);
         fprintf(LOG_FILE, "%lld\n", StackPop(&myStack, &stackErrors));  // Изменено на %lld
     }
 
@@ -110,6 +113,7 @@ void StackCtor(struct Stack* myStack, struct StackErrors* stackErrors)
 
 void StackPush(struct Stack* myStack, Elem_t value, struct StackErrors* stackErrors)
 {
+    printf ("первая канарейка - %lu\n", *(long long*)myStack->data);
     STACK_VERIFY(myStack, stackErrors);
 
     if (myStack->size >= myStack->capacity)
@@ -124,10 +128,11 @@ void StackPush(struct Stack* myStack, Elem_t value, struct StackErrors* stackErr
         StackRellocUp(myStack, koef_capacity, stackErrors);
     }
 
-    fprintf(LOG_FILE, "я в пуше\n");
+    fprintf (LOG_FILE, "я в пуше\n");
+    printf ("первая канарейка2 - %lu\n", *(long long*)myStack->data);
 
-    myStack->data[myStack->size++] = value;
-    myStack -> hash = CalculateHash (myStack);
+    myStack->data[1 + (myStack->size)] = value;
+    printf ("первая канарейка3 - %lu\n", *(long long*)myStack->data);
 
     STACK_VERIFY(myStack, stackErrors);
 }
@@ -142,7 +147,6 @@ void StackDtor(struct Stack* myStack, struct StackErrors* stackErrors)
 
 Elem_t StackPop(struct Stack* myStack, struct StackErrors* stackErrors)
 {
-    myStack -> hash = CalculateHash(myStack);
     STACK_VERIFY(myStack, stackErrors);
     return myStack->data[--(myStack->size)];
 }

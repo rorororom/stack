@@ -1,4 +1,4 @@
-typedef int Elem_t; // тип элементов стека
+typedef double Elem_t; // тип элементов стека
 
 const int Capacity_stack = 100;
 

@@ -3,5 +3,5 @@
 extern FILE* LOG_FILE;
 
 void CloseLogFile();
-void OpenLogFile (const char* FILE_NAME);
+void OpenLogFile (const char* FILE_NAME, const char* mode);
 

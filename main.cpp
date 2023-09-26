@@ -6,13 +6,45 @@
 
 int main()
 {
-    OpenLogFile ("LOGE");
+    OpenLogFile ("LOGE", "w");
+
+    Stack myStack = {
+#ifdef DWITH_CANARY_AND_HASHE
+        0,
+#endif
+        NULL,
+        0,
+        0,
+#ifdef DWITH_CANARY_AND_HASHE
+        0,
+        0
+#endif
+    };
+
+    struct StackErrors stackErrors = {};
+
+    StackCtor(&myStack, &stackErrors);
+    STACK_DUMP(&myStack, &stackErrors);
 
     #ifdef WITH_CANARY_AND_HASHE
-    StackFuncHash ();
-    #else
-    StackFunc ();
+    myStack.data[++(myStack.size)];
     #endif
+
+    for (int i = 1; i <= SIZE; i++) {
+        StackPush(&myStack, i * 10, &stackErrors);
+    }
+
+    STACK_DUMP(&myStack, &stackErrors);
+
+    fprintf (LOG_FILE, "попоюсь\n");
+    int size =  myStack.size;
+    for (int i = 0; i < size; i++) {
+        fprintf(LOG_FILE, "%lf\n", StackPop(&myStack, &stackErrors));
+    }
+
+    STACK_DUMP(&myStack, &stackErrors);
+
+    StackDtor(&myStack, &stackErrors);
 
     return 0;
 }

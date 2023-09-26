@@ -22,7 +22,7 @@ void PrintStackErrors(struct StackErrors* stackErrors)
     {
         fprintf(LOG_FILE, "Ошибка: Нулевой указатель на данные стека\n");
     }
-
+#ifdef WITH_CANARY_AND_HASHE
     if (stackErrors -> ERROR_PUSH_BIT)
     {
         fprintf(LOG_FILE, "Ошибка: Ошибка при попытке добавления элемента\n");
@@ -42,11 +42,12 @@ void PrintStackErrors(struct StackErrors* stackErrors)
     {
         fprintf(LOG_FILE, "Ошибка: Ошибка хэша\n");
     }
+#endif
 }
 
 int StackVerify(struct Stack* myStack, struct StackErrors* stackErrors)
 {
-    struct StackErrors errorFlags = { 0, 0, 0, 0, 0, 0 };
+    struct StackErrors errorFlags = { };
 
     int sum_error = 0;
 
@@ -89,6 +90,7 @@ int StackVerify(struct Stack* myStack, struct StackErrors* stackErrors)
     // printf ("canary_start - %d\n", myStack -> canary_start);
     // printf ("\n");
     // }
+#ifdef WITH_CANARY_AND_HASHE
     if (myStack->canary_start != BUF_CANARY)
     {
         errorFlags.ERROR_CANARY_START_BIT = 1;
@@ -116,6 +118,9 @@ int StackVerify(struct Stack* myStack, struct StackErrors* stackErrors)
         errorFlags.ERROR_HASH_BIT = 1;
         sum_error++;
         printf ("HERE6\n");
+        printf ("new_hashe - %d\n", new_hash);
+        printf ("myStack->hash - %d\n", myStack->hash);
+        printf ("\n");
     }
 
     //printf ("первая канарейка - %lu\n", *(long long *)myStack->data);
@@ -131,8 +136,8 @@ int StackVerify(struct Stack* myStack, struct StackErrors* stackErrors)
         sum_error++;
         printf ("HERE8\n");
     }
+#endif
 
-    printf ("sum - %d\n", sum_error);
     return sum_error;
 }
 
