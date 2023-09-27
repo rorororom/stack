@@ -134,6 +134,12 @@ Elem_t StackPop(struct Stack* myStack, struct StackErrors* stackErrors)
     STACK_VERIFY(myStack, stackErrors);
 
     return myStack->data[--(myStack->size)];
+
+    #ifdef WITH_CANARY_AND_HASHE
+    myStack -> hash = CalculateHash (myStack);
+    #endif
+    STACK_VERIFY(myStack, stackErrors);
+
 }
 
 void StackDtor(struct Stack* myStack, struct StackErrors* stackErrors)
