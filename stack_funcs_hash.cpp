@@ -133,7 +133,11 @@ Elem_t StackPop(struct Stack* myStack, struct StackErrors* stackErrors)
     #endif
     STACK_VERIFY(myStack, stackErrors);
 
+    #ifdef WITH_CANARY_AND_HASHE
+    return myStack->data[myStack->size--];
+    #else
     return myStack->data[--(myStack->size)];
+    #endif
 
     #ifdef WITH_CANARY_AND_HASHE
     myStack -> hash = CalculateHash (myStack);
