@@ -47,7 +47,7 @@ void PrintStackErrors(struct StackErrors* stackErrors)
 
 int StackVerify(struct Stack* myStack, struct StackErrors* stackErrors)
 {
-    struct StackErrors errorFlags = { };
+    struct StackErrors errorFlags = { 0, 0, 0, 0, 0, 0 };
 
     int sum_error = 0;
 
@@ -124,14 +124,14 @@ int StackVerify(struct Stack* myStack, struct StackErrors* stackErrors)
     }
 
     //printf ("первая канарейка - %lu\n", *(long long *)myStack->data);
-    if (*(long long *)myStack->data != BUF_CANARY){
+    if (*(SolveLeftCanary (myStack)) != BUF_CANARY){
         errorFlags.ERROR_DATA_START_BIT = 1;
         sum_error++;
         printf ("HERE7\n");
     }
 
     //printf ("вторая канарейка - %lu\n", *(long long*)((char*) myStack->data + sizeof(BUF_CANARY) + sizeof(Elem_t) * myStack->capacity));
-    if (*(long long*)((char*)myStack->data + sizeof(long long) + sizeof(Elem_t) * myStack->capacity) != BUF_CANARY) {
+    if (*(SolveRightCanary (myStack)) != BUF_CANARY) {
         errorFlags.ERROR_DATA_END_BIT = 1;
         sum_error++;
         printf ("HERE8\n");

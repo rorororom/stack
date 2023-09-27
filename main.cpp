@@ -26,6 +26,8 @@ int main()
     StackCtor(&myStack, &stackErrors);
     STACK_DUMP(&myStack, &stackErrors);
 
+    //myStack
+
     #ifdef WITH_CANARY_AND_HASHE
     myStack.data[++(myStack.size)];
     #endif

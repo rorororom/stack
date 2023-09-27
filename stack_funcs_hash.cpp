@@ -49,8 +49,8 @@ void StackCtor(struct Stack* myStack, struct StackErrors* stackErrors)
     #endif
 
     #ifdef WITH_CANARY_AND_HASHE
-    *(unsigned long long *)myStack->data = BUF_CANARY;
-    *(unsigned long long *)(myStack->data + myStack->capacity + 1) = BUF_CANARY;
+    *(SolveLeftCanary (myStack)) = BUF_CANARY;
+    *(SolveRightCanary (myStack)) = BUF_CANARY;
 
     myStack -> canary_start = BUF_CANARY;
     myStack -> canary_end = BUF_CANARY;
@@ -121,23 +121,32 @@ void StackRellocUp(struct Stack *myStack, float koef_capacity, struct StackError
     myStack->data = (Elem_t*)realloc(myStack->data, (myStack->capacity + 2) * sizeof(Elem_t));
 
     #ifdef WITH_CANARY_AND_HASHE
-    *(unsigned int *)myStack->data = BUF_CANARY;
-    *(unsigned int*)((char*) myStack->data + sizeof(BUF_CANARY) + sizeof(Elem_t) * myStack->capacity) = BUF_CANARY;
+    *(SolveLeftCanary (myStack)) = BUF_CANARY;
+    *(SolveRightCanary (myStack)) = BUF_CANARY;
     #endif
 }
 
 Elem_t StackPop(struct Stack* myStack, struct StackErrors* stackErrors)
 {
     #ifdef WITH_CANARY_AND_HASHE
-    myStack -> hash = CalculateHash (myStack);
-    #endif
+    myStack->hash = CalculateHash(myStack);
+#endif
     STACK_VERIFY(myStack, stackErrors);
 
-    #ifdef WITH_CANARY_AND_HASHE
-    return myStack->data[myStack->size--];
-    #else
-    return myStack->data[--(myStack->size)];
-    #endif
+#ifdef WITH_CANARY_AND_HASHE
+    if (myStack->size >= 0) {
+        Elem_t ans1 = myStack->data[myStack->size--];
+        myStack->data[myStack->size + 1] = REZET; // Обнуляем только последний элемент
+        return ans1;
+    }
+#else
+    if (myStack->size > 0) {
+        Elem_t ans = myStack->data[--(myStack->size)];
+        myStack->data[myStack->size] = REZET; // Обнуляем только последний элемент
+        return ans;
+    }
+#endif
+
 
     #ifdef WITH_CANARY_AND_HASHE
     myStack -> hash = CalculateHash (myStack);
@@ -169,8 +178,13 @@ unsigned int CalculateHash (struct Stack* myStack)
     return hash;
 }
 
-// Elem_t* ReturnData (struct Stack* myStack)
-// {
-//     return myStack -> data + sizeof (BUF_CANARY);
-// }
+unsigned long long* SolveLeftCanary (struct Stack* myStack)
+{
+    return (unsigned long long *)myStack->data - 3;
+}
+
+unsigned long long* SolveRightCanary (struct Stack* myStack)
+{
+    return (unsigned long long *)(myStack->data + myStack->capacity + 1);
+}
 
