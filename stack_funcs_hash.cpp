@@ -36,6 +36,12 @@ void StackDump(struct Stack* myStack, struct StackErrors* stackErrors, const cha
     fprintf(LOG_FILE, "DATA CANARY = %llu\n", myStack->data[myStack->capacity + 1]);
 
     fprintf(LOG_FILE, "\n");
+    fprintf(LOG_FILE, "\n");
+
+    fprintf(LOG_FILE, "STRUCT CANARY_START = %llu\n", myStack -> canary_start);
+    fprintf(LOG_FILE, "STRUCT CANARY_END = %llu\n", myStack -> canary_end);
+
+    fprintf(LOG_FILE, "\n");
     #endif
 }
 

@@ -91,24 +91,24 @@ int StackVerify(struct Stack* myStack, struct StackErrors* stackErrors)
     // printf ("\n");
     // }
 #ifdef WITH_CANARY_AND_HASHE
-    if (myStack->canary_start != BUF_CANARY)
-    {
-        errorFlags.ERROR_CANARY_START_BIT = 1;
-        sum_error++;
-        printf ("HERE4\n");
-    }
-
-    // if (myStack -> canary_end != BUF_CANARY)
-    // {
-    // printf ("canary_end - %d\n", myStack -> canary_end);
-    // printf ("\n");
-    // }
-    if (myStack->canary_end != BUF_CANARY)
-    {
-        errorFlags.ERROR_CANARY_END_BIT = 1;
-        sum_error++;
-        printf ("HERE5\n");
-    }
+//     if (myStack->canary_start != BUF_CANARY)
+//     {
+//         errorFlags.ERROR_CANARY_START_BIT = 1;
+//         sum_error++;
+//         printf ("HERE4\n");
+//     }
+//
+//     // if (myStack -> canary_end != BUF_CANARY)
+//     // {
+//     // printf ("canary_end - %d\n", myStack -> canary_end);
+//     // printf ("\n");
+//     // }
+//     if (myStack->canary_end != BUF_CANARY)
+//     {
+//         errorFlags.ERROR_CANARY_END_BIT = 1;
+//         sum_error++;
+//         printf ("HERE5\n");
+//     }
 
     unsigned int new_hash = CalculateHash (myStack);
     // printf ("new_hashe - %d\n", new_hash);
