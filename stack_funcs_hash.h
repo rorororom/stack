@@ -5,6 +5,8 @@ const int HASH_CONST = 234;
 const int MOD_FOR_HASH = 107;
 const int SIZE = 5;
 const Elem_t REZET = -1;
+const int DOP_RIGHT = 1;
+const int DOP_LEFT = 3;
 
 //const uint32_t Start = 0xDEADBEEF;
 //const uint32_t End = 0xFEEDBEEF;
@@ -62,5 +64,5 @@ void StackDtor(struct Stack* myStack, struct StackErrors* stackErrors);
 Elem_t StackPop(struct Stack* myStack, struct StackErrors* stackErrors);
 unsigned int CalculateHash (struct Stack* myStack);
 void PrintStackErrors(struct StackErrors* stackErrors);
-unsigned long long* SolveLeftCanary (struct Stack* myStack);
-unsigned long long* SolveRightCanary (struct Stack* myStack);
+unsigned long long* PointerLeftCanary (struct Stack* myStack);
+unsigned long long* PointerRightCanary (struct Stack* myStack);

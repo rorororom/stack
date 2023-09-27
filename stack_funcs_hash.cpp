@@ -55,8 +55,8 @@ void StackCtor(struct Stack* myStack, struct StackErrors* stackErrors)
     #endif
 
     #ifdef WITH_CANARY_AND_HASHE
-    *(SolveLeftCanary (myStack)) = BUF_CANARY;
-    *(SolveRightCanary (myStack)) = BUF_CANARY;
+    *(PointerLeftCanary (myStack)) = BUF_CANARY;
+    *(PointerRightCanary (myStack)) = BUF_CANARY;
 
     myStack -> canary_start = BUF_CANARY;
     myStack -> canary_end = BUF_CANARY;
@@ -127,8 +127,8 @@ void StackRellocUp(struct Stack *myStack, float koef_capacity, struct StackError
     myStack->data = (Elem_t*)realloc(myStack->data, (myStack->capacity + 2) * sizeof(Elem_t));
 
     #ifdef WITH_CANARY_AND_HASHE
-    *(SolveLeftCanary (myStack)) = BUF_CANARY;
-    *(SolveRightCanary (myStack)) = BUF_CANARY;
+    *(PointerLeftCanary (myStack)) = BUF_CANARY;
+    *(PointerRightCanary (myStack)) = BUF_CANARY;
     #endif
 }
 
@@ -184,13 +184,13 @@ unsigned int CalculateHash (struct Stack* myStack)
     return hash;
 }
 
-unsigned long long* SolveLeftCanary (struct Stack* myStack)
+unsigned long long* PointerLeftCanary (struct Stack* myStack)
 {
-    return (unsigned long long *)myStack->data - 3;
+    return (unsigned long long *)myStack->data - DOP_LEFT;
 }
 
-unsigned long long* SolveRightCanary (struct Stack* myStack)
+unsigned long long* PointerRightCanary (struct Stack* myStack)
 {
-    return (unsigned long long *)(myStack->data + myStack->capacity + 1);
+    return (unsigned long long *)(myStack->data + myStack->capacity + DOP_RIGHT);
 }
 
