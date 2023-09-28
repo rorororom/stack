@@ -5,8 +5,6 @@
 ### 0. Program launch
 #### To run the program in the terminal you need to write:
 ```
-make clean
-
 make
 ```
 #### Further
