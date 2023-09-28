@@ -29,16 +29,12 @@ enum eroor {
 }
 
 struct Stack {
-#ifdef WITH_CANARY_AND_HASHE
     uint32_t canary_start;
-#endif
     Elem_t* data;
     int capacity; // объем
     int size; // номер заполненного
-#ifdef WITH_CANARY_AND_HASHE
     unsigned int hash;
     uint32_t canary_end;
-#endif
 };
 
 struct StackErrors {

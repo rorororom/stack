@@ -1,6 +1,5 @@
 #include <stdlib.h>
 
-#include "stack_funcs.h"
 #include "log_funcs.h"
 #include "stack_funcs_hash.h"
 
@@ -26,11 +25,9 @@ int main()
     StackCtor(&myStack, &stackErrors);
     STACK_DUMP(&myStack, &stackErrors);
 
-    //myStack
-
-    #ifdef WITH_CANARY_AND_HASHE
+#ifdef WITH_CANARY_AND_HASHE
     myStack.data[++(myStack.size)];
-    #endif
+#endif
 
     for (int i = 1; i <= SIZE; i++) {
         StackPush(&myStack, i * 10, &stackErrors);
@@ -43,6 +40,8 @@ int main()
     for (int i = 0; i < size; i++) {
         fprintf(LOG_FILE, "%lf\n", StackPop(&myStack, &stackErrors));
     }
+
+    myStack.canary_start = 0;
 
     STACK_DUMP(&myStack, &stackErrors);
 

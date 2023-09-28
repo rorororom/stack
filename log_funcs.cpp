@@ -5,7 +5,7 @@
 #include "log_funcs.h"
 
 FILE* LOG_FILE = stderr;
-char* EXTENSION = ".log";
+const char* EXTENSION = ".log";
 
 void CloseLogFile()
 {
@@ -20,7 +20,7 @@ void OpenLogFile (const char* FILE_NAME, const char* mode)
 
     LOG_FILE = fopen (strcat(file_name, EXTENSION), mode);
 
-    if (LOG_FILE == nullptr)
+    if (LOG_FILE == NULL)
     {
         LOG_FILE = stderr;
     }

@@ -22,17 +22,17 @@ void StackDump(struct Stack* myStack, struct StackErrors* stackErrors, const cha
 
     int now_size = myStack->size;
 
-    #ifdef WITH_CANARY_AND_HASHE
+#ifdef WITH_CANARY_AND_HASHE
     for (int i = 1; i <= now_size; i++) {
         fprintf(LOG_FILE, "data[%d] = %lf\n", i, myStack->data[i]);
     }
-    #else
+#else
     for (int i = 0; i < now_size; i++) {
         fprintf(LOG_FILE, "data[%d] = %lf\n", i, myStack->data[i]);
     }
-    #endif
+#endif
 
-    #ifdef WITH_CANARY_AND_HASHE
+#ifdef WITH_CANARY_AND_HASHE
     fprintf(LOG_FILE, "DATA CANARY = %llu\n", myStack->data[myStack->capacity + 1]);
 
     fprintf(LOG_FILE, "\n");
@@ -42,19 +42,19 @@ void StackDump(struct Stack* myStack, struct StackErrors* stackErrors, const cha
     fprintf(LOG_FILE, "STRUCT CANARY_END = %llu\n", myStack -> canary_end);
 
     fprintf(LOG_FILE, "\n");
-    #endif
+#endif
 }
 
 void StackCtor(struct Stack* myStack, struct StackErrors* stackErrors)
 {
     myStack->capacity = Capacity;
-    #ifdef WITH_CANARY_AND_HASHE
+#ifdef WITH_CANARY_AND_HASHE
     myStack->data = (Elem_t*)calloc(myStack->capacity + 2, sizeof(Elem_t)); // todo
-    #else
+#else
     myStack->data = (Elem_t*)calloc(myStack->capacity, sizeof(Elem_t));
-    #endif
+#endif
 
-    #ifdef WITH_CANARY_AND_HASHE
+#ifdef WITH_CANARY_AND_HASHE
     *(PointerLeftCanary (myStack)) = BUF_CANARY;
     *(PointerRightCanary (myStack)) = BUF_CANARY;
 
@@ -62,36 +62,36 @@ void StackCtor(struct Stack* myStack, struct StackErrors* stackErrors)
     myStack -> canary_end = BUF_CANARY;
 
     myStack->hash = CalculateHash(myStack); // Рассчитываем и сохраняем хэш-код
-    #endif
+#endif
 
     myStack->size = 0;
 
     STACK_VERIFY(myStack, stackErrors);
 
-    #ifdef WITH_CANARY_AND_HASHE
+#ifdef WITH_CANARY_AND_HASHE
     fprintf(LOG_FILE, "\nCalculateHash = %u\n", CalculateHash(myStack));
     fprintf(LOG_FILE, "myStack->hash = %u\n\n", myStack->hash);
-    #endif
+#endif
 }
 
 void StackPush(struct Stack* myStack, Elem_t value, struct StackErrors* stackErrors)
 {
-    #ifdef WITH_CANARY_AND_HASHE
+#ifdef WITH_CANARY_AND_HASHE
     myStack -> hash = CalculateHash (myStack);
-    #endif
+#endif
     STACK_VERIFY(myStack, stackErrors);
 
-    #ifdef WITH_CANARY_AND_HASHE
+#ifdef WITH_CANARY_AND_HASHE
     if (myStack->size + 1 >= myStack->capacity) {
         float koef_capacity = 2.0;
         StackRellocUp(myStack, koef_capacity, stackErrors);
     }
-    #else
+#else
     if (myStack->size >= myStack->capacity) {
         float koef_capacity = 2.0;
         StackRellocUp(myStack, koef_capacity, stackErrors);
     }
-    #endif
+#endif
 
     else if (myStack->size < (myStack->capacity) / 2)
     {
@@ -109,9 +109,9 @@ void StackPush(struct Stack* myStack, Elem_t value, struct StackErrors* stackErr
         myStack->data[myStack->size++] = value;
     }
 
-    #ifdef WITH_CANARY_AND_HASHE
+#ifdef WITH_CANARY_AND_HASHE
     myStack->hash = CalculateHash(myStack);
-    #endif
+#endif
 
     STACK_VERIFY(myStack, stackErrors);
 }
@@ -126,15 +126,15 @@ void StackRellocUp(struct Stack *myStack, float koef_capacity, struct StackError
     fprintf(LOG_FILE, "capacity!!!после изменений = %d\n", myStack->capacity);
     myStack->data = (Elem_t*)realloc(myStack->data, (myStack->capacity + 2) * sizeof(Elem_t));
 
-    #ifdef WITH_CANARY_AND_HASHE
+#ifdef WITH_CANARY_AND_HASHE
     *(PointerLeftCanary (myStack)) = BUF_CANARY;
     *(PointerRightCanary (myStack)) = BUF_CANARY;
-    #endif
+#endif
 }
 
 Elem_t StackPop(struct Stack* myStack, struct StackErrors* stackErrors)
 {
-    #ifdef WITH_CANARY_AND_HASHE
+#ifdef WITH_CANARY_AND_HASHE
     myStack->hash = CalculateHash(myStack);
 #endif
     STACK_VERIFY(myStack, stackErrors);
