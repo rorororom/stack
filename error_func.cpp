@@ -47,7 +47,7 @@ void PrintStackErrors(struct StackErrors* stackErrors)
 
 int StackVerify(struct Stack* myStack, struct StackErrors* stackErrors)
 {
-    struct StackErrors errorFlags = { 0, 0, 0, 0, 0, 0 };
+    struct StackErrors errorFlags = { };
 
     int sum_error = 0;
 
