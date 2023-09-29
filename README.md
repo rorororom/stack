@@ -1,4 +1,4 @@
-# Quadratic equation
+# Stack
 
 ##### This project is about stack and vulnerabilities.
 
