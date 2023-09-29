@@ -15,6 +15,8 @@ make
 ### 0.1 Option - DEFENSE
 ________
 ```
-options = -DWITH_CANARY_AND_HASHE
+-DWITH_CANARY
+or
+-DWITH_HASH
 
 ```
