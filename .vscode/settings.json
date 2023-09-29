@@ -4,6 +4,18 @@
         "span": "cpp",
         "vector": "cpp",
         "string": "cpp",
-        "string_view": "cpp"
+        "string_view": "cpp",
+        "__hash_table": "cpp",
+        "__split_buffer": "cpp",
+        "bitset": "cpp",
+        "deque": "cpp",
+        "initializer_list": "cpp",
+        "queue": "cpp",
+        "random": "cpp",
+        "stack": "cpp",
+        "unordered_map": "cpp",
+        "utility": "cpp",
+        "format": "cpp",
+        "iterator": "cpp"
     }
 }

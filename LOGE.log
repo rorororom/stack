@@ -1,79 +1,82 @@
 \----------------------------------------------------\
 ОТКРЫТ ФАЙЛ
 
-CalculateHash = 52
-myStack->hash = 52
+Time is 13:18:28
+I'm stackDump called from main (15) main.cpp
+Stack[0x7f98f5405a68] "myStack" from stack.cpp(13) in function - main.
 
-
-Time is 13:36:57
-I'm stackDump called from main (26) main.cpp
-Stack[0x7faa37c05a60] "myStack" from stack_funcs_hash.cpp(13) in function - main.
-
-size = 0
-capacity = 100
-адрес data[] = 0x7faa37c05a60
-DATA CANARY = 140735351792224
-DATA CANARY = 140735351792224
-
-
+--------------------------------------------------------------------------
 STRUCT CANARY_START = 3739151853
+
+Struct:
+	size = 0
+	capacity = 10
+	адрес data[] = 0x7f98f5405a68
+
+DATA CANARY LEFT  = 140735351792224
+DATA CANARY RIGHT = 140735351792224
+HASH = 97
+
 STRUCT CANARY_END = 3739151853
+--------------------------------------------------------------------------
 
-я - StackRellocUp
-capacity!!!перед изменением = 100
-capacity!!!после изменений = 50
-я - StackRellocUp
-capacity!!!перед изменением = 50
-capacity!!!после изменений = 25
-я - StackRellocUp
-capacity!!!перед изменением = 25
-capacity!!!после изменений = 12
-я - StackRellocUp
-capacity!!!перед изменением = 12
-capacity!!!после изменений = 6
-я - StackRellocUp
-capacity!!!перед изменением = 6
-capacity!!!после изменений = 12
+Time is 13:18:28
+I'm stackDump called from main (21) main.cpp
+Stack[0x7f98f5405a68] "myStack" from stack.cpp(13) in function - main.
 
-Time is 13:36:57
-I'm stackDump called from main (36) main.cpp
-Stack[0x7faa37c05a60] "myStack" from stack_funcs_hash.cpp(13) in function - main.
-
-size = 5
-capacity = 12
-адрес data[] = 0x7faa37c05a60
-DATA CANARY = 140735351792224
-data[1] = 10.000000
-data[2] = 20.000000
-data[3] = 30.000000
-data[4] = 40.000000
-data[5] = 50.000000
-DATA CANARY = 140735351792224
-
-
+--------------------------------------------------------------------------
 STRUCT CANARY_START = 3739151853
-STRUCT CANARY_END = 3739151853
 
-попоюсь
+Struct:
+	size = 10
+	capacity = 10
+	адрес data[] = 0x7f98f5405a68
+
+DATA CANARY LEFT  = 140735351792224
+	data[0] = 10.000000
+	data[1] = 20.000000
+	data[2] = 30.000000
+	data[3] = 40.000000
+	data[4] = 50.000000
+	data[5] = 60.000000
+	data[6] = 70.000000
+	data[7] = 80.000000
+	data[8] = 90.000000
+	data[9] = 100.000000
+DATA CANARY RIGHT = 140735351792224
+HASH = 105392
+
+STRUCT CANARY_END = 3739151853
+--------------------------------------------------------------------------
+POPING
+100.000000
+90.000000
+80.000000
+70.000000
+60.000000
 50.000000
 40.000000
 30.000000
 20.000000
 10.000000
 
-Time is 13:36:57
-I'm stackDump called from main (46) main.cpp
-Stack[0x7faa37c05a60] "myStack" from stack_funcs_hash.cpp(13) in function - main.
+Time is 13:18:28
+I'm stackDump called from main (31) main.cpp
+Stack[0x7f98f5405a68] "myStack" from stack.cpp(13) in function - main.
 
-size = 0
-capacity = 12
-адрес data[] = 0x7faa37c05a60
-DATA CANARY = 140735351792224
-DATA CANARY = 140735351792224
-
-
+--------------------------------------------------------------------------
 STRUCT CANARY_START = 0
-STRUCT CANARY_END = 3739151853
 
+Struct:
+	size = 0
+	capacity = 2
+	адрес data[] = 0x7f98f5405a68
+
+DATA CANARY LEFT  = 140735351792224
+DATA CANARY RIGHT = 140735351792224
+HASH = 70
+
+STRUCT CANARY_END = 3739151853
+--------------------------------------------------------------------------
 ЗАКРЫТ ФАЙЛ
 \----------------------------------------------------\

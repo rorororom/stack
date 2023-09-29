@@ -1,12 +1,13 @@
-typedef double Elem_t; // тип элементов стека
+typedef double Elem_t;
+typedef unsigned long long Canary_t;
 
-const int Capacity = 100;
+const int SIZE = 10;
+const int Capacity = SIZE + 0;
 const int HASH_CONST = 234;
 const int MOD_FOR_HASH = 107;
-const int SIZE = 5;
-const Elem_t REZET = -1;
+const Elem_t POISONELEMENT = -1;
 const int DOP_RIGHT = 1;
-const int DOP_LEFT = 3;
+const int DOP_LEFT = 1;
 
 //const uint32_t Start = 0xDEADBEEF;
 //const uint32_t End = 0xFEEDBEEF;
@@ -27,6 +28,8 @@ enum eroor {
         STACK_DUMP(myStack, stackErrors);           \
     }                                               \
 }
+
+#define CALCULATE_HASH(stack) stack->hash = CalculateHash(stack)
 
 struct Stack {
     uint32_t canary_start;
@@ -51,14 +54,14 @@ struct StackErrors {
 #endif
 };
 
-void StackRellocUp(struct Stack *myStack, float koef_capacity, struct StackErrors* stackErrors);
+void StackRealloc(struct Stack *myStack, float koef_capacity, struct StackErrors* stackErrors);
 void StackDump(struct Stack* myStack, struct StackErrors* stackErrors, const char *file, int line, const char *function);
 struct StackErrors StackOk(struct Stack* myStack);
 void StackCtor(struct Stack* myStack, struct StackErrors* stackErrors);
 void StackPush(struct Stack* myStack, Elem_t value, struct StackErrors* stackErrors);
 void StackDtor(struct Stack* myStack, struct StackErrors* stackErrors);
 Elem_t StackPop(struct Stack* myStack, struct StackErrors* stackErrors);
-unsigned int CalculateHash (struct Stack* myStack);
+unsigned int CalculateHash(struct Stack* myStack);
 void PrintStackErrors(struct StackErrors* stackErrors);
-unsigned long long* PointerLeftCanary (struct Stack* myStack);
-unsigned long long* PointerRightCanary (struct Stack* myStack);
+Elem_t * PointerLeftCanary(struct Stack* myStack);
+Elem_t * PointerRightCanary(struct Stack* myStack);
