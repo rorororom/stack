@@ -18,6 +18,9 @@ int main()
         StackPush(&myStack, i * 10, &stackErrors);
     }
 
+    myStack.data[myStack.capacity - 1] = 107;
+    myStack.data[myStack.capacity - 3] = 107;
+
     STACK_DUMP(&myStack, &stackErrors);
 
     fprintf (LOG_FILE, "POPING\n");

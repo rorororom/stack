@@ -2,12 +2,15 @@ typedef double Elem_t;
 typedef unsigned long long Canary_t;
 
 const int SIZE = 10;
-const int Capacity = SIZE + 0;
-const int HASH_CONST = 234;
+const int Capacity = SIZE + 5;
+const Elem_t HASH_CONST = 234;
+const int XOR_CONST = 555555555;
 const int MOD_FOR_HASH = 107;
 const Elem_t POISONELEMENT = -1;
 const int DOP_RIGHT = 1;
 const int DOP_LEFT = 1;
+
+const Elem_t EPS = 0.000001;
 
 //const uint32_t Start = 0xDEADBEEF;
 //const uint32_t End = 0xFEEDBEEF;
@@ -36,7 +39,7 @@ struct Stack {
     Elem_t* data;
     int capacity; // объем
     int size; // номер заполненного
-    unsigned int hash;
+    Elem_t hash;
     uint32_t canary_end;
 };
 

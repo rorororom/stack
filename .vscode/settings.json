@@ -16,6 +16,7 @@
         "unordered_map": "cpp",
         "utility": "cpp",
         "format": "cpp",
-        "iterator": "cpp"
+        "iterator": "cpp",
+        "__bit_reference": "cpp"
     }
 }

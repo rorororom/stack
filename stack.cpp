@@ -26,7 +26,8 @@ void StackDump(struct Stack* myStack, struct StackErrors* stackErrors, const cha
 #endif
 
     int now_size = myStack->size;
-    for (int i = 0; i < now_size; i++) {
+    for (int i = 0; i < now_size; i++)
+    {
         fprintf(LOG_FILE, "\tdata[%d] = %lf\n", i, myStack->data[i]);
     }
 
@@ -146,15 +147,15 @@ void StackDtor(struct Stack* myStack, struct StackErrors* stackErrors)
 
 unsigned int CalculateHash (struct Stack* myStack)
 {
-    unsigned int hash = 1;
+    int hash = 0;
 
-    hash = (hash * HASH_CONST + sizeof(Elem_t) * myStack->capacity) % MOD_FOR_HASH;
-    hash = (hash * HASH_CONST + sizeof(Elem_t) * myStack->size) % MOD_FOR_HASH;
-    hash = (hash * HASH_CONST + sizeof(myStack->data)) % MOD_FOR_HASH;
+    // hash = (hash * HASH_CONST + sizeof(Elem_t) * myStack->capacity) % MOD_FOR_HASH;
+    // hash = (hash * HASH_CONST + sizeof(Elem_t) * myStack->size) % MOD_FOR_HASH;
+    // hash = (hash * HASH_CONST + sizeof(myStack->data)) % MOD_FOR_HASH;
 
     for (int i = 0; i < myStack->capacity; i++)
     {
-        hash += (unsigned int)(myStack->data[myStack->capacity - 1] - myStack->data[i]) * HASH_CONST;
+        hash = hash + ((((int)(myStack->data[i] * HASH_CONST)) % MOD_FOR_HASH) ^ XOR_CONST);
     }
 
     return hash;
