@@ -11,7 +11,7 @@ make
 ```
 ./main.out
 ```
-#### There are 2 options for the program: test or user
+#### There are 2 options for the program: canary, hash or simple
 ### 0.1 Option - DEFENSE
 ________
 ```
