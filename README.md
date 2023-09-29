@@ -1,6 +1,6 @@
 # Quadratic equation
 
-##### In this project I created a program that solves a quadratic equation
+##### This project is about stack and vulnerabilities.
 
 ### 0. Program launch
 #### To run the program in the terminal you need to write:
@@ -17,5 +17,4 @@ ________
 ```
 options = -DWITH_CANARY_AND_HASHE
 
-.......
 ```

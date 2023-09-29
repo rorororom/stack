@@ -17,6 +17,8 @@
         "utility": "cpp",
         "format": "cpp",
         "iterator": "cpp",
-        "__bit_reference": "cpp"
+        "__bit_reference": "cpp",
+        "__threading_support": "cpp",
+        "variant": "cpp"
     }
 }

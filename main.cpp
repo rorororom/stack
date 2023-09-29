@@ -5,35 +5,33 @@
 
 int main()
 {
-    OpenLogFile ("LOGE", "w");
+    OpenLogFile ("LOGE", "a");
 
     Stack myStack = {};
 
-    struct StackErrors stackErrors = {};
+    StackCtor(&myStack);
+    STACK_DUMP(&myStack);
 
-    StackCtor(&myStack, &stackErrors);
-    STACK_DUMP(&myStack, &stackErrors);
-
-    for (int i = 1; i <= SIZE; i++) {
-        StackPush(&myStack, i * 10, &stackErrors);
+    unsigned now_size = SIZE;
+    for (int i = 1; i <= now_size; i++) {
+        StackPush(&myStack, i * 10);
     }
 
-    myStack.data[myStack.capacity - 1] = 107;
-    myStack.data[myStack.capacity - 3] = 107;
+    myStack.data[3] += 107;
 
-    STACK_DUMP(&myStack, &stackErrors);
+    STACK_DUMP(&myStack);
 
     fprintf (LOG_FILE, "POPING\n");
     int size =  myStack.size;
     for (int i = 0; i < size; i++) {
-        fprintf(LOG_FILE, "%lf\n", StackPop(&myStack, &stackErrors));
+        fprintf(LOG_FILE, "%lf\n", StackPop(&myStack));
     }
 
-    myStack.canary_start = 0;
+    //myStack.canary_start = 0;
 
-    STACK_DUMP(&myStack, &stackErrors);
+    STACK_DUMP(&myStack);
 
-    StackDtor(&myStack, &stackErrors);
+    StackDtor(&myStack);
 
     return 0;
 }

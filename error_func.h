@@ -1,2 +1,6 @@
-void PrintStackErrors(struct StackErrors* stackErrors);
-int StackVerify(struct Stack* myStack, struct StackErrors* stackErrors);
+#ifndef ERROR_FUNC
+#define ERROR_FUNC
+
+int StackVerify(struct Stack* myStack);
+
+#endif
