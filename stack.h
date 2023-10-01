@@ -97,6 +97,8 @@ const Canary_t BUF_CANARY =  0xDEDEEDED;
 }
 
 
+                                                            // StackVerify returns bitmask of errors; let's save its result and if there are any errors
+                                                            // return from any function like Stack... via this macros; you only need to return saved StackVerify result
 #define STACK_VERIFY(myStack) {             \
     if (StackVerify(myStack) > 0) {         \
         STACK_DUMP(myStack);                \

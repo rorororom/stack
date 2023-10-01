@@ -6,7 +6,7 @@
 #include "stack.h"
 #include "error_func.h"
 
-static void StackRealloc(struct Stack *myStack, float koef_capacity);           // why declaration is in .cpp?
+static void StackRealloc(struct Stack *myStack, float koef_capacity);           // why declaration is in .cpp? just put definition of StackRealloc before StackPush
 
 void StackDump(struct Stack* myStack, const char *file, int line, const char *function)
 {
@@ -16,7 +16,7 @@ void StackDump(struct Stack* myStack, const char *file, int line, const char *fu
 
     fprintf(LOG_FILE, "--------------------------------------------------------------------------\n");
 #ifdef WITH_CANARY
-    fprintf(LOG_FILE, "STRUCT CANARY_START = %llu\n\n", myStack -> canary_start);
+    fprintf(LOG_FILE, "STRUCT CANARY_START = %llu\n\n", myStack->canary_start);
 #endif
     fprintf(LOG_FILE, "Struct:\n");
     fprintf(LOG_FILE, "\tsize = %d\n", myStack->size);
@@ -43,9 +43,9 @@ void StackDump(struct Stack* myStack, const char *file, int line, const char *fu
 }
 
 
-void StackCtor(struct Stack* myStack)
+void StackCtor(struct Stack* myStack)   // capacity as an argument
 {
-    myStack->capacity = CAPACITY;
+    myStack->capacity = CAPACITY;   // myStack->capacity = capacity given as an argument
     myStack->size = 0;
 
     int scale = 0;
@@ -75,8 +75,8 @@ void StackCtor(struct Stack* myStack)
 
 void StackPush(struct Stack* myStack, Elem_t value)
 {
-    STACK_VERIFY(myStack);
-
+    STACK_VERIFY(myStack);                                  // let's make STACK_VERIFY return from function if there are any errors; so return value will be int
+                                                            // (for example), not void (and this is for all Stack... functions!)
     if (myStack->size >= myStack->capacity) {
         float koef_capacity = UP_KOEF;
         StackRealloc(myStack, koef_capacity);
@@ -91,11 +91,13 @@ void StackPush(struct Stack* myStack, Elem_t value)
     STACK_VERIFY(myStack);
 }
 
-static void StackRealloc( Stack *myStack, float koef_capacity)          // hmm, why static?
+static void StackRealloc( Stack *myStack, float koef_capacity)
 {
     STACK_VERIFY(myStack);
 
-    myStack->capacity *= koef_capacity;
+    myStack->capacity *= koef_capacity;                                                             // what if realloc did not succeed? in this case
+                                                                                                    // i believe you want capacity to remain in its previous state;
+                                                                                                    // but now you change it whether realloc succeded or not
 #ifdef WITH_CANARY
     Elem_t* allocatedData = (Elem_t *)((Canary_t *)myStack->data - 1);
     allocatedData = (Elem_t*)realloc(allocatedData, (myStack->capacity + 2) * sizeof(Elem_t));
@@ -105,13 +107,13 @@ static void StackRealloc( Stack *myStack, float koef_capacity)          // hmm, 
         printf("ERROR MEMORY FOR REALLOC\n");
     }
 
-    myStack->data = (Elem_t *)((Canary_t *)allocatedData + 1);
+    myStack->data = (Elem_t *)((Canary_t *)allocatedData + 1);                                      // what if realloc returns NULL? now you just assign NULL to data ptr without any doubt
 #else
     myStack->data = (Elem_t*)realloc(myStack->data, (myStack->capacity + 2) * sizeof(Elem_t));      // what if realloc returns NULL?
 
     if (myStack->data == NULL)
     {
-        printf("ERROR MEMORY FOR REALLOC\n");
+        printf("ERROR MEMORY FOR REALLOC\n");                                                       // should 
     }
 #endif
 
@@ -141,7 +143,7 @@ Elem_t StackPop(struct Stack* myStack)
 
     if (myStack->size < (myStack->capacity) / UP_KOEF)
     {
-        float koef_capacity = DOWN_KOEF;
+        float koef_capacity = DOWN_KOEF;                // hmm, no need in this variable, just pass DOWN_COEF into function
         StackRealloc(myStack, koef_capacity);
     }
 
@@ -161,7 +163,7 @@ Elem_t StackPop(struct Stack* myStack)
 #endif
 
         STACK_VERIFY(myStack);
-        return ans;
+        return ans;                                     // it's better to return ans through function arguments: return value of StackPop will be taken by error
 }
 
 void StackDtor(struct Stack* myStack)
@@ -189,7 +191,7 @@ long long CalculateHash(struct Stack* myStack)
 
     for (int i = 0; i < myStack->capacity; i++)
     {
-        hash = hash + ((((long long)(myStack->data[i] * HASH_CONST)) % MOD_FOR_HASH) ^ XOR_CONST);  // just hash += ... :)
+        hash = hash + ((((long long)(myStack->data[i] * HASH_CONST)) % MOD_FOR_HASH) ^ XOR_CONST);  // just hash += ... 
     }
 
     return hash;
