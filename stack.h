@@ -1,6 +1,8 @@
 #ifndef STACK
 #define STACK
 
+#include <cstdint>
+
 /**
  * @brief class type for stack
  *
@@ -88,6 +90,7 @@ const Canary_t BUF_CANARY =  0xDEDEEDED;
 
 #define STACK_DUMP(myStack) StackDump(myStack, FILE, LINE, __func__);
 
+                                                            // do field name in Stack struct and put name of variable via # operator in name field in this define
 #define STACK_CONSTRUCT(nameStruct) {       \
     struct Stack nameStruct = {};           \
     stack_ctor(&nameStruct);                \

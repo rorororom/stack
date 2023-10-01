@@ -6,7 +6,7 @@
 #include "stack.h"
 #include "error_func.h"
 
-static void StackRealloc(struct Stack *myStack, float koef_capacity);
+static void StackRealloc(struct Stack *myStack, float koef_capacity);           // why declaration is in .cpp?
 
 void StackDump(struct Stack* myStack, const char *file, int line, const char *function)
 {
@@ -56,7 +56,7 @@ void StackCtor(struct Stack* myStack)
     scale = myStack->capacity * sizeof(Elem_t);
 #endif
 
-myStack->data = (Elem_t *)calloc(scale, sizeof(char));
+    myStack->data = (Elem_t *)calloc(scale, sizeof(char));
 
 #ifdef WITH_CANARY
     myStack->data = (Elem_t *)((Canary_t *)myStack->data + 1);
@@ -91,7 +91,7 @@ void StackPush(struct Stack* myStack, Elem_t value)
     STACK_VERIFY(myStack);
 }
 
-static void StackRealloc( Stack *myStack, float koef_capacity)
+static void StackRealloc( Stack *myStack, float koef_capacity)          // hmm, why static?
 {
     STACK_VERIFY(myStack);
 
@@ -107,7 +107,7 @@ static void StackRealloc( Stack *myStack, float koef_capacity)
 
     myStack->data = (Elem_t *)((Canary_t *)allocatedData + 1);
 #else
-    myStack->data = (Elem_t*)realloc(myStack->data, (myStack->capacity + 2) * sizeof(Elem_t));
+    myStack->data = (Elem_t*)realloc(myStack->data, (myStack->capacity + 2) * sizeof(Elem_t));      // what if realloc returns NULL?
 
     if (myStack->data == NULL)
     {
@@ -119,12 +119,22 @@ static void StackRealloc( Stack *myStack, float koef_capacity)
     CALCULATE_HASH(myStack);
 #endif
 
-#ifdef WITH_CANARY
-    *(PointerLeftCanary (myStack)) = BUF_CANARY;
-    *(PointerRightCanary (myStack)) = BUF_CANARY;
-#endif
-}
-
+#ifdef WITH_CANARY                                      // weren't you tired of writing ifdef... each time? this might be done a bit better:            
+    *(PointerLeftCanary (myStack)) = BUF_CANARY;        // IF_CANARY(
+    *(PointerRightCanary (myStack)) = BUF_CANARY;       //            *(PointerLeftCanary (myStack))  = BUF_CANARY;
+#endif                                                  //            *(PointerRightCanary (myStack)) = BUF_CANARY; 
+}                                                       //          )
+                                                        //
+                                                        // where IF_CANARY is a define like this:
+                                                        // #ifdef WITH_CANARY
+                                                        //      #define IF_CANARY(code) code
+                                                        // #else
+                                                        //      #define IF_CANARY(code)
+                                                        // #endif
+                                                        // 
+                                                        // similarly with IF_HASH
+                                                        //
+                                                        // in your code it is possible to rewrite every construction with #else witout it
 Elem_t StackPop(struct Stack* myStack)
 {
     STACK_VERIFY(myStack);
@@ -179,7 +189,7 @@ long long CalculateHash(struct Stack* myStack)
 
     for (int i = 0; i < myStack->capacity; i++)
     {
-        hash = hash + ((((long long)(myStack->data[i] * HASH_CONST)) % MOD_FOR_HASH) ^ XOR_CONST);
+        hash = hash + ((((long long)(myStack->data[i] * HASH_CONST)) % MOD_FOR_HASH) ^ XOR_CONST);  // just hash += ... :)
     }
 
     return hash;
