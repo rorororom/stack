@@ -17,7 +17,7 @@ int main()
         StackPush(&myStack, i * 10);
     }
 
-    myStack.data[3] += 107;
+    //myStack.data[3] += 107;
 
     STACK_DUMP(&myStack);
 

@@ -102,7 +102,7 @@ static void StackRealloc( Stack *myStack, float koef_capacity)
 
     if (allocatedData == NULL)
     {
-        printf("ERROR MEMORY FOR REALLOC\n");
+        fprintf(LOG_FILE, "ERROR MEMORY FOR REALLOC\n");
     }
 
     myStack->data = (Elem_t *)((Canary_t *)allocatedData + 1);
@@ -111,7 +111,7 @@ static void StackRealloc( Stack *myStack, float koef_capacity)
 
     if (myStack->data == NULL)
     {
-        printf("ERROR MEMORY FOR REALLOC\n");
+        fprintf(LOG_FILE, "ERROR MEMORY FOR REALLOC\n");
     }
 #endif
 
