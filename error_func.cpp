@@ -55,7 +55,7 @@ int StackVerify(struct Stack* myStack)
 
     if (myStack->size > myStack->capacity)
     {
-        printf("A\n");
+        printf("A\n");                              // nice printf
         sum_errors = sum_errors | ERROR_SIZE_BIT;
     }
 
@@ -91,8 +91,8 @@ int StackVerify(struct Stack* myStack)
     }
 #endif
 
-    if (sum_errors > 0)
-    {
+    if (sum_errors > 0) // not > 0 but != 0! if you set the senior meaning bit in int variable to 1, it becomes negative and this if won't work, but you want it 
+    {                   //                                                                                                                 to work in this case...
         PrintStackErrors(sum_errors);
     }
 
